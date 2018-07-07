@@ -15,17 +15,12 @@
         </p>
         <p>By well-defined, we mean that there is a rule that enables us to determine whether a given object is an
             element of the set.</p>
-        <p>If a set has no elements, it is called the empty set, or null set, and is denoted by the symbol 􏰂.</p>
+        <p>If a set has no elements, it is called the empty set, or null set, and is denoted by the symbol ∅.</p>
         <p>D = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}</p>
         <p>This method of denoting a set is called the <b>roster method</b>. A second way to denote a set is to use <b>set-builder
             notation</b>, where the set D of digits is written as</p>
 
         <svg width="100%" height="100" xmlns="http://www.w3.org/2000/svg">
-            <style>
-                /* Обратите внимание, что цвет текста задается с помощью        *
-                 * fill свойства, а свойство color используется только для HTML */
-                /*.hand { font: italic 40px serif; fill: red; }*/
-            </style>
             <text x="80" y="20">D =</text>
             <text x="135" y="20">{</text>
             <text x="220" y="20">x</text>
@@ -91,6 +86,116 @@
                 (c) B ∩ (A ∪ C)
             </p>
         </div>
+
+        <p>
+            Usually, in working with sets, we designate a <b>universal set U</b>, the set consisting of <b>all the
+            elements that we wish to consider</b>.
+            Once a universal set has been designated, we can consider elements of
+            the universal set not found in a given set.
+        </p>
+        <p>
+            If A is a set, the <b>complement</b> of A, denoted Ā, is the set consisting of all the elements in the
+            universal set that are not in A.
+        </p>
+        <p>
+            If the universal set is U = {1, 2, 3, 4, 5, 6, 7, 8, 9} and if A = {1, 3, 5, 7, 9}, then Ā = {2, 4, 6, 8}.
+        </p>
+        <p>
+            It follows from the definition of complement that A ∪ Ā = U and A ∩ Ā = ∅.
+        </p>
+
+        <div class="quiz">
+            <p class="sesquialteral">
+                <b>U</b> = universal set = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+                <br><b>A</b> = {1, 3, 4, 5, 9},
+                <br><b>B</b> = {2, 4, 6, 7, 8},
+                <br><b>C</b> = {1, 3, 4, 6}</p>
+            <p class="double">
+                Find:
+                <br>
+                <b class="complement">A</b> (complement of A)
+                <br>
+                <b class="complement">C</b> (complement of C)
+                <br>
+                <b class="complement">A ∩ B</b> (complement of intersect of A and B)
+                <br>
+                <b class="complement">B ∪ C</b> (complement of union of B and C)
+                <br>
+                <b class="complement">A</b> ∪ <b class="complement">B</b> (union of complement of A and complement of B)
+                <br>
+                <b class="complement">B</b> ∪ <b class="complement">C</b> (intersect of complement of B and complement
+                of C)
+            </p>
+        </div>
+        <p>
+            It is often helpful to draw pictures of sets. Such pictures, called <b>Venn diagrams</b>, represent sets as
+            circles enclosed in a rectangle, which represents the universal set. Such diagrams often help us to
+            visualize various relationships among sets.
+        </p>
+        <p>
+            If we know that <b>A ⊆ B</b>, we might use the Venn diagram in Figure 1(a).
+        </p>
+        <p>If we know that A and B have no elements in common, that is, if <b>A ∩ B = ∅</b>, we might use the Venn
+            diagram in
+            Figure 2(b). The sets A and B in Figure 2(b) are said to be <b>disjoint</b>.</p>
+        <figure>
+            <svg width="100%" height="460" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                    <rect x="0" y="0" width="180" height="200" fill="antiquewhite"/>
+                    <text x="10" y="20">Universal set</text>
+                    <circle cx="60" cy="100" r="50" fill="none" stroke="red" stroke-width="1"/>
+                    <text x="30" y="100">A</text>
+                    <circle cx="120" cy="100" r="50" fill="none" stroke="green" stroke-width="1"/>
+                    <text x="140" y="100">B</text>
+                    <circle cx="90" cy="140" r="50" fill="none" stroke="blue" stroke-width="1"/>
+                    <text x="85" y="170">C</text>
+                </g>
+
+                <g>
+                    <rect x="290" y="0" width="180" height="200" fill="antiquewhite"/>
+                    <text x="300" y="20">Universal set</text>
+                    <circle cx="380" cy="110" r="80" fill="none" stroke="red" stroke-width="1"/>
+                    <text x="320" y="90">A</text>
+                    <circle cx="380" cy="110" r="40" fill="none" stroke="green" stroke-width="1"/>
+                    <text x="360" y="100">B</text>
+                    <text x="300" y="220">(a) subset A ⊆ B</text>
+                </g>
+
+                <g>
+                    <rect x="0" y="240" width="280" height="160" fill="antiquewhite"/>
+                    <text x="10" y="260">Universal set</text>
+                    <circle cx="60" cy="330" r="50" fill="none" stroke="red" stroke-width="1"/>
+                    <text x="55" y="335">A</text>
+                    <circle cx="220" cy="330" r="50" fill="none" stroke="green" stroke-width="1"/>
+                    <text x="215" y="335">B</text>
+                    <text x="10" y="420">(b) A ∩ B = ∅</text>
+                    <text x="38" y="445">disjoint sets</text>
+                </g>
+            </svg>
+            <figcaption>Figure 1</figcaption>
+        </figure>
+
+        <figure>
+            <svg width="100%" height="460" xmlns="http://www.w3.org/2000/svg">
+                <mask id="myMask">
+                    <!-- Everything under a white pixel will be visible -->
+                    <circle cx="60" cy="100" r="50" fill="white"/>
+
+                    <!-- Everything under a black pixel will be invisible -->
+                    <circle cx="120" cy="100" r="50" fill="black"/>
+                </mask>
+                <g>
+                    <rect x="0" y="0" width="180" height="200" fill="antiquewhite"/>
+                    <text x="10" y="20">Universal set</text>
+                    <circle cx="60" cy="100" r="50" fill="none" stroke="red" stroke-width="1" mask="url(#myMask)"/>
+                    <text x="30" y="100">A</text>
+                    <!--<circle cx="120" cy="100" r="50" fill="none" stroke="green" stroke-width="1"/>-->
+                    <!--<text x="140" y="100">B</text>-->
+                </g>
+
+            </svg>
+            <figcaption>Figure 2</figcaption>
+        </figure>
     </article>
     <article>
         <h2>JavaScript</h2>

@@ -25,9 +25,30 @@ article {
     fill: var(--hand-color);
 }
 
-pre{
+pre {
     line-height: 1;
 }
+
 .center {
     text-align: center;
+}
+
+.complement {
+    position: relative;
+}
+
+.complement:before {
+    content: "";
+    border-top: 1px solid;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.sesquialteral{
+    line-height: 1.5;
+}
+.double{
+    line-height: 2;
 }
