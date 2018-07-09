@@ -46,9 +46,14 @@ pre {
     width: 100%;
 }
 
-.sesquialteral{
+.sesquialteral {
     line-height: 1.5;
 }
-.double{
+
+.double {
     line-height: 2;
+}
+
+.lower-alpha {
+    list-style-type: lower-alpha;
 }

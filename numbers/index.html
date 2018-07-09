@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Numbers</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<h1 class="center">Classify numbers</h1>
+<section>
+    <article>
+        <p>It is helpful to classify the various kind of numbers that we deal with as sets.
+
+            The counting numbers, or <b>natural numbers</b>, are the numbers in the set {1, 2, 3, 4 ...}. (The three
+            dots, called an <b>ellipsis</b>, indicate that the pattern continues indefinitely.)
+        </p>
+        <p>The <b>integers</b> are the set of numbers {... , -3, -2, -1, 0, 1, 2, 3, ...}.</p>
+        <p>
+            A rational number is a number that can be expressed as a quotient
+            <svg width="1ch" height="3ch" style="position: relative; top: 1ch">
+                <g font-style="italic">
+                    <text x="0" y="10">a</text>
+                    <text x="0" y="10">_</text>
+                    <text x="0" y="30">b</text>
+                </g>
+            </svg>
+            of two integers. The integer <b>a</b> is called the
+            <b>numerator</b>, and the integer <b>b</b>, which cannot be 0 is called the <b>denominator</b>.
+        </p>
+        <svg width="100%" height="40" xmlns="http://www.w3.org/2000/svg">
+            <text x="80" y="20" font-style="italic">a</text>
+            <text x="120" y="20" class="hand">⟵ numerator</text>
+            <text x="79" y="20">_</text>
+            <text x="80" y="40" font-style="italic">b</text>
+            <text x="120" y="40" class="hand">⟵ denominator</text>
+        </svg>
+        <p>
+            Since
+            <svg width="5ch" height="3ch" style="position: relative; top: 1ch">
+                <g font-style="italic">
+                    <text x="0" y="10">a</text>
+                    <text x="0" y="20">− = a</text>
+                    <text x="0" y="30">1</text>
+                </g>
+            </svg>
+            for any integer <i>a</i>, it follows that the set of integers is a subset of the set of rational numbers.
+        </p>
+        <svg width="100%" height="250">
+            <g>
+                <rect x="20" y="0" width="180" height="200" fill="antiquewhite"/>
+                <text x="30" y="20">All numbers</text>
+                <circle cx="110" cy="110" r="80" fill="none" stroke="red" stroke-width="1"/>
+                <text x="40" y="90">A</text>
+                <circle cx="110" cy="110" r="40" fill="none" stroke="green" stroke-width="1"/>
+                <text x="90" y="100">B</text>
+                <text x="30" y="220">subset A ⊆ B</text>
+                <text x="240" y="20">A - rational numbers</text>
+                <text x="240" y="40">B - integers</text>
+
+            </g>
+        </svg>
+        <p>Rational numbers may be represented as <b>decimals</b>. It can be
+            shown that every rational number may be represented by a decimal that either terminates or is nonterminating
+            with a repeating block of digits, and vice versa.</p>
+        <svg width="100%" height="100">
+            <g>
+                <text x="20" y="15">3</text>
+                <text x="20" y="25">− = 0.75</text>
+                <text x="20" y="35">4</text>
+            </g>
+            <g>
+                <text x="120" y="15">2</text>
+                <text x="120" y="25">− = 0.666...</text>
+                <text x="120" y="35">3</text>
+            </g>
+        </svg>
+        <p>
+            On the other hand, some decimals do not fit into either of these categories. Such decimals represent
+            <b>irrational</b> numbers. Every irrational number may be represented by a decimal that <b>neither repeats
+            nor terminates</b>. In other words, irrational numbers
+            cannot be written in the form
+            <svg width="1ch" height="3ch" style="position: relative; top: 1ch">
+                <g font-style="italic">
+                    <text x="0" y="10">a</text>
+                    <text x="0" y="10">_</text>
+                    <text x="0" y="30">b</text>
+                </g>
+            </svg>
+            , where <i>a</i>, <i>b</i> are integers and b ≠ 0.
+        </p>
+        <p>The set of <b>real numbers</b> is the union of the set of rational numbers with the set of irrational
+            numbers.</p>
+        <svg width="100%" height="300">
+            <rect x="0" y="0" height="300" width="200" fill="lavender"></rect>
+            <text x="50" y="30">Irrational</text>
+            <text x="50" y="50">numbers</text>
+            <rect x="200" y="0" height="300" width="300" fill="antiquewhite"></rect>
+            <text x="250" y="30">Rational numbers</text>
+            <circle cx="350" cy="175" r="100" fill="lightblue"/>
+            <line x1="420" y1="120" x2="520" y2="80" stroke="black" />
+            <text x="525" y="80">Integers</text>
+            <circle cx="350" cy="175" r="70" fill="darksalmon"/>
+            <line x1="410" y1="170" x2="520" y2="140" stroke="black" />
+            <text x="525" y="140">Whole numbers</text>
+            <circle cx="350" cy="175" r="40" fill="khaki"/>
+            <line x1="370" y1="190" x2="520" y2="220" stroke="black" />
+            <text x="525" y="220">Natural numbers</text>
+        </svg>
+        <div class="quiz">
+            <p>List the numbers in the set</p>
+            <svg width="100%" height="80">
+                <text x="20" y="20">⎧</text>
+                <text x="20" y="39">⎨</text>
+                <text x="20" y="58">⎩</text>
+                <text x="30" y="36">-3, </text>
+                <g>
+                    <text x="60" y="26">2 </text>
+                    <text x="60" y="36">−, </text>
+                    <text x="60" y="46">3 </text>
+                </g>
+                    <text x="80" y="36">0.12, √2, 𝜋, 10, 2.151515...</text>
+                <text y="20" x="300">⎫</text>
+                <text y="39" x="300">⎬</text>
+                <text y="58" x="300">⎭</text>
+            </svg>
+            <p>that are:</p>
+            <ol class="lower-alpha">
+                <li>Natural numbers</li>
+                <li>Integers</li>
+                <li>Rational numbers</li>
+                <li>Irrational numbers</li>
+                <li>Real numbers</li>
+            </ol>
+        </div>
+    </article>
+</section>
+</body>
+</html>
