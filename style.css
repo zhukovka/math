@@ -18,11 +18,19 @@ article {
     font-size: 1.2rem;
 }
 
+p {
+    line-height: 1.2;
+}
+
 .hand {
     font-family: 'Nanum Pen Script', cursive;
     font-size: 1.4rem;
     color: var(--hand-color);
     fill: var(--hand-color);
+}
+
+.blue {
+    color: var(--hand-color);
 }
 
 pre {
