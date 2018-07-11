@@ -31,6 +31,7 @@ p {
 
 .blue {
     color: var(--hand-color);
+    fill: var(--hand-color);
 }
 
 pre {
@@ -64,4 +65,8 @@ pre {
 
 .lower-alpha {
     list-style-type: lower-alpha;
+}
+
+.flex{
+    display: flex;
 }

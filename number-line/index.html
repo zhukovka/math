@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Real Number Line</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<h1 class="center">The Real Number Line</h1>
+<section>
+    <article>
+        <p>
+            Real numbers can be represented by points on a line called the <b>real number line</b>.
+        </p>
+        <div class="flex">
+            <figure>
+                <svg height="300">
+                    <line x1="20" y1="130" x2="20" y2="120" stroke="black"/>
+                    <text x="10" y="150" class="blue">-2</text>
+
+                    <line x1="80" y1="130" x2="80" y2="120" stroke="black"/>
+                    <text x="70" y="150" class="blue">-1</text>
+
+                    <line x1="110" y1="130" x2="110" y2="125" stroke="black"/>
+                    <g font-size="small">
+                        <text x="100" y="158">-</text>
+                        <text x="108" y="150">1</text>
+                        <text x="107" y="153">_</text>
+                        <text x="108" y="165">2</text>
+                    </g>
+                    <g>
+                        <text x="148" y="70">Scale</text>
+                        <line x1="140" y1="75" x2="140" y2="85" stroke="black" stroke-width="2"></line>
+                        <line x1="144" y1="80" x2="196" y2="80" stroke="black" marker-start="url(#arrow)"
+                              marker-end="url(#arrow)"/>
+                        <line x1="200" y1="75" x2="200" y2="85" stroke="black" stroke-width="2"></line>
+                        <text x="153" y="95" font-size="small">1 unit</text>
+                    </g>
+                    <!--center-->
+                    <text x="135" y="115" font-style="italic">O</text>
+                    <line x1="140" y1="130" x2="140" y2="120" stroke="black"/>
+                    <text x="135" y="150" class="blue">0</text>
+                    <line x1="140" y1="180" x2="140" y2="220" marker-start="url(#arrow)" fill="var(--hand-color)"
+                          stroke="var(--hand-color)"/>
+                    <text x="10" y="200" class="hand">Negative</text>
+                    <text x="10" y="220" class="hand">real numbers</text>
+                    <text x="120" y="240" class="hand">Zero</text>
+                    <text x="180" y="200" class="hand">Positive</text>
+                    <text x="180" y="220" class="hand">real numbers</text>
+
+
+                    <line x1="170" y1="130" x2="170" y2="125" stroke="black"/>
+                    <g font-size="small">
+                        <text x="168" y="150">1</text>
+                        <text x="167" y="153">_</text>
+                        <text x="168" y="165">2</text>
+                    </g>
+                    <line x1="200" y1="130" x2="200" y2="120" stroke="black"/>
+                    <text x="195" y="150" class="blue">1</text>
+
+                    <line x1="230" y1="130" x2="230" y2="125" stroke="black"/>
+                    <text x="225" y="150" font-size="small">√2</text>
+
+                    <line x1="260" y1="130" x2="260" y2="120" stroke="black"/>
+                    <text x="255" y="150" class="blue">2</text>
+                    <!-- Coordinate axes with a arrowhead in both direction -->
+                    <polyline points="10,130 290,130" fill="none" stroke="black"
+                              marker-end="url(#arrow)"  />
+                </svg>
+                <figcaption>Figure 1. Real number line</figcaption>
+            </figure>
+            <div>
+                <p>
+                    Pick a point on the line somewhere in the center, and label it <i>O</i>. This point, called the <b>origin</b>,
+                    corresponds to the real number 0.
+                </p>
+                <p>
+                    The point 1 unit to the right of <i>O</i> corresponds to the number 1. The distance between 0 and 1
+                    determines the <b>scale</b> of the number line.
+                </p>
+                <p>
+                    The <b>negative real numbers</b> are the coordinates of points to the left of the origin <i>O</i>.
+                </p>
+                <p>The real number <b>zero</b> is the coordinate of the origin <i>O</i>.</p>
+                <p>
+                    The positive real numbers are the coordinates of points to the right of the origin <i>O</i>.
+                </p>
+            </div>
+        </div>
+    </article>
+    <article>
+        <h3>Graph Inequalities</h3>
+        <p>
+            An important property of the real number line follows from the fact that, given two numbers (points)
+            <i>a</i> and <i>b</i>, either <i>a</i> is to the left of <i>b</i>, or <i>a</i> is at the same location as
+            <i>b</i>, or <i>a</i> is to the right of <i>b</i>.
+        </p>
+        <div class="flex">
+            <figure>
+                <svg height="300">
+                    <!-- Coordinate axes with a arrowhead in both direction -->
+                    <polyline points="10,30 290,30" fill="none" stroke="black"
+                              marker-end="url(#arrow)"  />
+                    <g class="blue" font-style="italic">
+                        <circle cx="60" cy="30" r="5"/>
+                        <text x="55" y="60">a</text>
+                        <circle cx="230" cy="30" r="5"/>
+                        <text x="225" y="60">b</text>
+                    </g>
+                    <text x="120" y="60" font-style="italic">a < b</text>
+
+                    <polyline points="10,130 290,130" fill="none" stroke="black"
+                              marker-end="url(#arrow)"  />
+                    <g class="blue" font-style="italic">
+                        <circle cx="150" cy="130" r="5"/>
+                        <text x="145" y="160">a</text>
+                        <text x="145" y="180">b</text>
+                    </g>
+                    <text x="20" y="180" font-style="italic">a = b</text>
+
+                    <polyline points="10,230 290,230" fill="none" stroke="black"
+                              marker-end="url(#arrow)"  />
+
+                    <g class="blue" font-style="italic">
+                        <circle cx="60" cy="230" r="5"/>
+                        <text x="55" y="260">b</text>
+                        <circle cx="230" cy="230" r="5"/>
+                        <text x="225" y="260">a</text>
+                    </g>
+                    <text x="120" y="260" font-style="italic">b < a</text>
+                </svg>
+                <figcaption>Figure 2.</figcaption>
+            </figure>
+            <div>
+                <p>
+                    If <i>a</i> is to the left of <i>b</i>, we say that “<i>a</i>is less than <i>b</i>” and write <i>a
+                    < b</i>.</p>
+                <p>
+                    If <i>a</i> is to the right of <i>b</i>, we say that “<i>a</i>is greater than <i>b</i>” and write
+                    <i>a > b</i>.</p>
+                <p>
+                    If <i>a</i> is at the same location as <i>b</i>, then <i>a = b</i>.</p>
+                <p>
+                    If <i>a</i> is either less than or equal to b, we write <i>a ≤ b</i>. Similarly, <i>a ≥ b</i> means
+                    that
+                    <i>a</i> is
+                    either greater than or equal to <i>b</i>.</p>
+                <p> Collectively, the symbols >, <, ≤, and ≥ are called <b>inequality symbols</b>.</p>
+            </div>
+        </div>
+    </article>
+</section>
+<svg>
+    <defs>
+        <!-- arrowhead marker definition -->
+        <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
+                        markerWidth="6" markerHeight="6"
+                orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z"/>
+        </marker>
+         <!-- simple dot marker definition -->
+        <marker id="dot" viewBox="0 0 10 10" refX="5" refY="5"
+                markerWidth="5" markerHeight="5">
+            <circle cx="5" cy="5" r="5" fill="red"/>
+        </marker>
+    </defs>
+</svg>
+</body>
+</html>
