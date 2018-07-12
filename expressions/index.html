@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Evaluating an Algebraic Expression</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<h1 class="center">Evaluating an Algebraic Expression</h1>
+<section>
+    <article>
+        <p>Remember, in algebra we use letters such as <i>x, y, a, b,</i> and <i>c</i> to represent numbers. If
+            the letter used is to represent any number from a given set of numbers, it is called a <b>variable</b>. A
+            <b>constant</b> is either a fixed number, such as 5 or 13, or a letter that represents a fixed (possibly
+            unspecified) number.</p>
+
+        <h3>Determine the Domain of a Variable</h3>
+        <p>
+            In working with expressions or formulas involving variables, the variables may be allowed to take on values
+            from only a certain set of numbers. For example, in the formula for the area
+            <i>A</i> of a circle of radius <i>r</i>, <i>A = 𝛑r²</i>, the variable <i>r</i> is necessarily restricted to
+            the positive real numbers.
+        </p>
+        <p>
+            The set of values that a variable may assume is called the <b>domain of the variable</b>.
+        </p>
+    </article>
+    <article>
+        <h3>Use the Laws of Exponents</h3>
+        <p>If <i>a</i> is a real number and <i>n</i> is a positive integer, then the symbol <i><b>aⁿ</b></i> represents
+            the product of
+            <i>n</i> factors of <i>a</i>. That is,</p>
+        <div class="flex">
+            <figure>
+                <svg height="80" width="200">
+                    <text x="10" y="15" font-style="italic">aⁿ = a × a × a × ... × a</text>
+                    <text x="80" y="50" class="hand">n factors</text>
+                    <use href="#paren" x="50" y="15" width="150" height="20"></use>
+                </svg>
+            </figure>
+            <div>
+                <p>In the expression <i>aⁿ</i>, <i>a</i> is called the <b>base</b> and <i>n</i> is called the <b>exponent</b>,
+                    or power. We
+                    read an as “<i>a</i>
+                    raised to
+                    the power <i>n</i>” or as “<i>a</i> to the <i>nth</i> power.” We usually read <i>a²</i> as “<i>a</i>
+                    squared” and
+                    <i>a³</i> as “<i>a</i> cubed.”
+                </p>
+                <p>
+                    In working with exponents, the operation of raising to a power is <span class="highlight">performed before any other
+                                        operation.</span></p>
+                <p>
+                    <span class="highlight"><i>a</i>⁰ = 1 if <i>a</i> ≠ 0</span>
+                </p>
+                <p>Whenever you encounter a negative exponent, think “reciprocal.”</p>
+                <p>
+                    <svg class="highlight" width="100" height="40">
+                        <g>
+                            <text x="10" y="20" font-style="italic">a⁻ⁿ =</text>
+                            <text x="65" y="10">1</text>
+                            <path d="M60,15 H 80" stroke="black"></path>
+                            <text x="60" y="32" font-style="italic">aⁿ</text>
+                        </g>
+                    </svg>
+                </p>
+            </div>
+        </div>
+        <p>The following properties, called the <b>Laws of Exponents</b>, can be proved using the
+            preceding definitions. In the list, <i>a</i> and <i>b</i> are real numbers, and <i>m</i> and <i>n</i>
+            are integers.</p>
+        <figure>
+            <svg class="highlight" width="500" height="40">
+                <text x="10" y="20" font-style="italic">aⁿaᵐ = aⁿ⁺ᵐ</text>
+                <text x="200" y="20" font-style="italic">(aⁿ)ᵐ = aⁿᵐ</text>
+            </svg>
+            <svg class="highlight" width="500" height="50">
+                <g font-style="italic">
+                    <text x="10" y="20">aⁿ</text>
+                    <path d="M10,25 H 30" stroke="black"></path>
+                    <text x="10" y="42">aᵐ</text>
+                    <text x="45" y="30">= aⁿ⁻ᵐ =</text>
+                    <text x="140" y="20">1</text>
+                    <path d="M120,25 H 160" stroke="black"></path>
+                    <text x="120" y="42">aᵐ⁻ⁿ</text>
+                </g>
+                <text x="205" y="30">if a ≠ 0</text>
+            </svg>
+            <svg class="highlight" width="500" height="50">
+                <g font-style="italic">
+                    <use href="#parenLeft" x="0" y="5" width="10" height="40"></use>
+                    <text x="10" y="20">a</text>
+                    <path d="M10,25 H 25" stroke="black"></path>
+                    <text x="10" y="42">b</text>
+                    <use href="#parenRight" x="25" y="5" width="10" height="40"></use>
+                    <text x="30" y="15">ⁿ</text>
+                    <text x="45" y="30">=</text>
+                    <text x="65" y="20">aⁿ</text>
+                    <path d="M65,25 H 80" stroke="black"></path>
+                    <text x="65" y="42">bⁿ</text>
+                </g>
+                <text x="205" y="30">if b ≠ 0</text>
+            </svg>
+        </figure>
+
+    </article>
+
+    <svg>
+        <symbol id="paren" fill="none" viewBox="0 0 113 13">
+            <path d="M62.6750871,-48.3109756 C59.0165505,-49.0101626 56.9332172,-47.2621951 56.4250871,-43.0670732 C55.662892,-36.7743902 56.5775261,-7.93292683 55.662892,-1.6402439 C55.0531359,2.55487805 53.2238676,5.35162602 50.1750871,6.75 C53.2238676,8.14837398 55.0531359,10.945122 55.662892,15.1402439 C56.5775261,21.4329268 55.662892,50.2743902 56.4250871,56.5670732 C56.9332172,60.7621951 59.0165505,62.5101626 62.6750871,61.8109756"
+                  stroke="var(--hand-color)" transform="rotate(-90.000000 56.425087, 6.750000)"></path>
+        </symbol>
+        <symbol id="parenLeft" viewBox="0 0 13 102" stroke="none" stroke-width="2" fill="none" fill-rule="evenodd">
+            <path d="M12,5.68434189e-14 C-2.66666667,34 -2.66666667,68 12,102" stroke="black"></path>
+        </symbol>
+        <symbol id="parenRight" viewBox="0 0 13 102" stroke="none" stroke-width="2" fill="none" fill-rule="evenodd">
+            <path d="M12,5.68434189e-14 C-2.66666667,34 -2.66666667,68 12,102" stroke="black"
+                  transform="translate(6.500000, 51.000000) scale(-1, 1) translate(-6.500000, -51.000000) "></path>
+        </symbol>
+    </svg>
+</section>
+</body>
+</html>
