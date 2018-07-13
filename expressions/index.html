@@ -104,8 +104,101 @@
         </figure>
 
     </article>
-
+    <article>
+        <h3>Evaluate Square Roots</h3>
+        <p>
+            A real number is squared when it is raised to the power 2. The inverse of squaring is finding a <b>square
+            root</b>.
+        </p>
+        <p>The symbol √, called a <b>radical sign</b>, is used to denote the principal, or non-negative, square root.
+        </p>
+        <p>If <i>a</i> is a non-negative real number, the non-negative number <i>b</i> such that <i>b² = a</i> is the
+            principal root of
+            <i>a</i>, and is denoted by
+            <i>b = √a</i></p>
+        <p>
+            <span class="highlight"><i>√a²</i> = |<i>a</i>| for <i>a</i> any real number</span>
+        </p>
+    </article>
+    <article>
+        <h3>Scientific Notation</h3>
+        <p>
+            When a number has been written as the product of a number <i>x</i>, where 1 ≤ <i>x</i> < 10, times a power
+            of 10, it is
+            said to be written in <i>scientific notation</i>.
+        </p>
+        <p>
+            <b>Converting a Decimal to Scientific Notation</b>
+        </p>
+        <p>
+            To change a positive number into scientific notation:
+        </p>
+        <ol>
+            <li>
+                Count the number N of places that the decimal point must be moved to
+                arrive at a number <i>x</i>, where 1 ≤ <i>x</i> < 10.
+            </li>
+            <li>
+                If the original number is greater than or equal to 1, the scientific notation is <i>x</i> × 10ᴺ. If the
+                original number is between 0 and 1, the scientific notation is
+                <i>x</i> × 10⁻ᴺ.
+            </li>
+        </ol>
+        <div class="example">
+            <figure>
+                <svg height="60">
+                    <text x="10" y="20" letter-spacing="5">9 5 8 2 .</text>
+                    <path d="M115,25 V40 H90" stroke="var(--hand-color)" fill="none"></path>
+                    <!--<use href="#arrowR" x="10" y="25" width="25" height="20"></use>-->
+                    <!--<use href="#arrowUp" x="30" y="25" width="25" height="20"></use>-->
+                    <use href="#arrowUp" x="0" y="25" width="30" height="20"
+                         transform="scale(-1, 1) translate(-105, 0)"></use>
+                    <use href="#arrowUp" x="0" y="25" width="30" height="20"
+                         transform="scale(-1, 1) translate(-80, 0)"></use>
+                    <use href="#arrowUp" x="0" y="25" width="30" height="20"
+                         transform="scale(-1, 1) translate(-55, 0)"></use>
+                    <text x="40" y="60" letter-spacing="5" class="hand">1 2 3</text>
+                    <text x="120" y="20">= 9.582 × 10³</text>
+                </svg>
+            </figure>
+            <figure>
+                <svg height="60">
+                    <text x="10" y="20" letter-spacing="5">0 . 2 8 5</text>
+                    <use href="#arrowR" x="35" y="25" width="25" height="20"></use>
+                    <use href="#arrowUp" x="50" y="25" width="30" height="20"></use>
+                    <text x="50" y="60" letter-spacing="5" class="hand">1</text>
+                    <text x="120" y="20">= 2.85 × 10<tspan font-size="small" y="10">-1</tspan>
+                    </text>
+                </svg>
+            </figure>
+            <figure>
+                <svg height="60" width="400">
+                    <text x="10" y="20" letter-spacing="5">0 . 0 0 0 5 6 1</text>
+                    <use href="#arrowR" x="35" y="25" width="25" height="20"></use>
+                    <use href="#arrowUp" x="50" y="25" width="30" height="20"></use>
+                    <use href="#arrowUp" x="75" y="25" width="30" height="20"></use>
+                    <use href="#arrowUp" x="100" y="25" width="30" height="20"></use>
+                    <use href="#arrowUp" x="125" y="25" width="30" height="20"></use>
+                    <text x="70" y="60" letter-spacing="5" class="hand">1 2 3 4</text>
+                    <text x="200" y="20">= 5.61 × 10<tspan font-size="small" y="10">-4</tspan>
+                    </text>
+                </svg>
+            </figure>
+        </div>
+    </article>
     <svg>
+        <symbol id="arrowR" viewBox="0 0 20 20">
+            <path d="M0,0 V15 H20" stroke="var(--hand-color)" fill="none" marker-end="url(#arrow)"></path>
+        </symbol>
+        <symbol id="arrowUp" viewBox="0 0 30 20">
+            <path d="M0,15 H27 V2" stroke="var(--hand-color)" fill="none" marker-end="url(#arrow)"></path>
+        </symbol>
+        <!-- arrowhead marker definition -->
+        <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
+                        markerWidth="6" markerHeight="6" fill="var(--hand-color)"
+                orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z"/>
+        </marker>
         <symbol id="paren" fill="none" viewBox="0 0 113 13">
             <path d="M62.6750871,-48.3109756 C59.0165505,-49.0101626 56.9332172,-47.2621951 56.4250871,-43.0670732 C55.662892,-36.7743902 56.5775261,-7.93292683 55.662892,-1.6402439 C55.0531359,2.55487805 53.2238676,5.35162602 50.1750871,6.75 C53.2238676,8.14837398 55.0531359,10.945122 55.662892,15.1402439 C56.5775261,21.4329268 55.662892,50.2743902 56.4250871,56.5670732 C56.9332172,60.7621951 59.0165505,62.5101626 62.6750871,61.8109756"
                   stroke="var(--hand-color)" transform="rotate(-90.000000 56.425087, 6.750000)"></path>
