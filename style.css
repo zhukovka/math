@@ -3,6 +3,7 @@
 :root {
     --unit: 10px;
     --hand-color: #0d82ff;
+    --highlight: lemonchiffon;
 }
 
 html {
@@ -72,6 +73,6 @@ pre {
 }
 
 .highlight{
-    background: lemonchiffon;
+    background: var(--highlight);
     padding: 5px;
 }
