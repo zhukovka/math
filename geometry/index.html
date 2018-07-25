@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Geometry Essentials</title>
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../codemirror/codemirror.css">
+    <script src="../codemirror/codemirror.js"></script>
 </head>
 <body>
 <h1 class="center">Geometry Essentials</h1>
@@ -533,32 +535,7 @@
             </div>
         </div>
     </article>
-    <svg>
-        <symbol id="triangle" viewBox="0,0 270,160">
-            <path d="M10,100 H260 L150,10Z" stroke="var(--hand-color)"
-                  fill="var(--highlight)"></path>
-            <text x="135" y="30" font-size="small">100˚</text>
-            <text x="40" y="90" font-size="small">30˚</text>
-            <text x="210" y="90" font-size="small">50˚</text>
-        </symbol>
-        <symbol id="triangle2" viewBox="0,0 80,110">
-            <path d="M10,20 L70,10 L30,100Z" stroke="var(--hand-color)"
-                  fill="var(--highlight)"></path>
-        </symbol>
-        <symbol id="half" viewBox="0,0,10,40">
-            <text x="0" y="0">
-                <tspan x="2" y="10">1</tspan>
-                <tspan x="0" y="12">_</tspan>
-                <tspan x="2" y="30">2</tspan>
-            </text>
-        </symbol>
-        <!-- arrowhead marker definition -->
-        <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
-                        markerWidth="6" markerHeight="6"
-                orient="auto-start-reverse">
-            <path d="M 0 0 L 10 5 L 0 10 z"/>
-        </marker>
-    </svg>
+
 </section>
 <section>
     <div class="quiz">
@@ -572,8 +549,142 @@
                         called the <input name="a2" type="text">.
                     </li>
                     <li>
-                        For a triangle with base <i>b</i> and altitude <i>h</i>, a formula for the area A is <input name="a3"
-                                                                                                      type="text">.
+                        For a triangle with base <i>b</i> and altitude <i>h</i>, a formula for the area A is <input
+                            name="a3"
+                            type="text">.
+                    </li>
+                    <li>
+                        The formula for the circumference <i>C</i> of a circle of radius <i>r</i> is <input type="text"
+                                                                                                            name="a4">
+                    </li>
+                    <li>
+                        Two triangles are <input type="text" name="a5"> if corresponding angles are equal and the
+                        lengths of the corresponding sides are proportional.
+                    </li>
+                    <li>
+                        <p>In a right triangle, the square of the length of the longest side equals the sum of the
+                            squares of the lengths of the other two sides.</p>
+                        <input type="radio" name="a6" value="T" id="a6T">
+                        <label for="a6T">True</label>
+                        <input type="radio" name="a6" value="F" id="a6F">
+                        <label for="a6F">False</label>
+                    </li>
+                    <li>
+                        <p>The triangle with sides of length 6, 8, and 10 is a right triangle.</p>
+                        <input type="radio" name="a7" value="T" id="a7T">
+                        <label for="a7T">True</label>
+                        <input type="radio" name="a7" value="F" id="a7F">
+                        <label for="a7F">False</label>
+                    </li>
+                    <li>
+                        <p>The volume of a sphere of radius r is
+                            <svg height="35" width="40" style="position: relative; top: 10px;">
+                                <text x="0" y="20">
+                                    <tspan y="10">4</tspan>
+                                    <tspan y="15" x="0">_</tspan>
+                                    <tspan y="30" x="0">3</tspan>
+                                    <tspan y="25">𝛑r²</tspan>
+                                </text>
+                            </svg>
+                        </p>
+                        <input type="radio" name="a8" value="T" id="a8T">
+                        <label for="a8T">True</label>
+                        <input type="radio" name="a8" value="F" id="a8F">
+                        <label for="a8F">False</label>
+                    </li>
+                    <li>
+                        <p>The triangles shown are congruent.</p>
+                        <svg width="100%">
+                            <svg>
+                                <use href="#triangle2" x="0" y="0" width="80" height="110"></use>
+                                <g font-size="small" font-style="italic">
+                                    <text x="0" y="50">29</text>
+                                    <text x="60" y="50">30</text>
+                                    <text x="25" y="10">10</text>
+                                </g>
+                            </svg>
+                            <svg x="100">
+                                <use href="#triangle2" x="0" y="0" width="80" height="110"></use>
+                                <g font-size="small" font-style="italic">
+                                    <text x="0" y="50">29</text>
+                                    <text x="60" y="50">30</text>
+                                    <text x="25" y="10">10</text>
+                                </g>
+                            </svg>
+                        </svg>
+                        <input type="radio" name="a9" value="T" id="a9T">
+                        <label for="a9T">True</label>
+                        <input type="radio" name="a9" value="F" id="a9F">
+                        <label for="a9F">False</label>
+                    </li>
+                    <li>
+                        <p>
+                            The triangles shown are similar.
+                        </p>
+                        <svg width="100%">
+                            <use href="#triangle2" x="0" y="0" width="80" height="110"></use>
+                            <g font-size="small" font-style="italic">
+                                <text x="20" y="30">25˚</text>
+                                <text x="25" y="110">100˚</text>
+                            </g>
+                            <use href="#triangle2" x="100" y="0" width="120" height="165"></use>
+                            <g font-size="small" font-style="italic">
+                                <text x="120" y="40">25˚</text>
+                                <text x="140" y="115">100˚</text>
+                            </g>
+
+                        </svg>
+                        <input type="radio" name="a10" value="T" id="a10T">
+                        <label for="a10T">True</label>
+                        <input type="radio" name="a10" value="F" id="a10F">
+                        <label for="a10F">False</label>
+                    </li>
+                    <li>
+                        <p>
+                            The triangles shown are similar.
+                        </p>
+                        <svg width="100%">
+                            <use href="#triangle2" x="0" y="0" width="80" height="110"></use>
+                            <g font-size="small" font-style="italic">
+                                <text x="0" y="50">3</text>
+                                <text x="60" y="50">2</text>
+                                <text x="25" y="110">40˚</text>
+                            </g>
+                            <use href="#triangle2" x="100" y="0" width="120" height="165"></use>
+                            <g font-size="small" font-style="italic">
+                                <text x="100" y="80">4</text>
+                                <text x="200" y="80">3</text>
+                                <text x="140" y="115">40˚</text>
+                            </g>
+                        </svg>
+                        <input type="radio" name="a11" value="T" id="a11T">
+                        <label for="a11T">True</label>
+                        <input type="radio" name="a11" value="F" id="a11F">
+                        <label for="a11F">False</label>
+                    </li>
+                </ol>
+            </fieldset>
+            <fieldset>
+                <legend>Skill Building</legend>
+                <p>In Problems 11–16, the lengths of the legs of a right triangle are given. Find the hypotenuse.</p>
+                <ol start="11">
+                    <li>
+                        a = 5, b = 12, c = <input type="text" name="a12">
+                    </li>
+                    <li>
+                        a = 6, b = 8, c = <input type="text" name="a13">
+                    </li>
+                    <li>
+                        a = 10, b = 24, c = <input type="text" name="a14">
+                    </li>
+                    <li>
+                        a = 4, b = 3, c = <input type="text" name="a15">
+                    </li>
+                    <li>
+                        a = 7, b = 24, c = <input type="text" name="a16">
+                    </li>
+                    <li>
+                        a = 14, b = 48, c = <input type="text" name="a17">
                     </li>
                 </ol>
             </fieldset>
@@ -582,6 +693,43 @@
         <div id="results"></div>
     </div>
 </section>
+<textarea name="code" id="jscode" cols="30" rows="10">
+function hypotenuse(a,b){
+    return 42;
+}
+</textarea>
+<svg>
+    <symbol id="triangle" viewBox="0,0 270,160">
+        <path d="M10,100 H260 L150,10Z" stroke="var(--hand-color)"
+              fill="var(--highlight)"></path>
+        <text x="135" y="30" font-size="small">100˚</text>
+        <text x="40" y="90" font-size="small">30˚</text>
+        <text x="210" y="90" font-size="small">50˚</text>
+    </symbol>
+    <symbol id="triangle2" viewBox="0,0 80,110">
+        <path d="M10,20 L70,10 L30,100Z" stroke="var(--hand-color)"
+              fill="var(--highlight)"></path>
+    </symbol>
+    <symbol id="half" viewBox="0,0,10,40">
+        <text x="0" y="0">
+            <tspan x="2" y="10">1</tspan>
+            <tspan x="0" y="12">_</tspan>
+            <tspan x="2" y="30">2</tspan>
+        </text>
+    </symbol>
+    <!-- arrowhead marker definition -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
+                    markerWidth="6" markerHeight="6"
+            orient="auto-start-reverse">
+        <path d="M 0 0 L 10 5 L 0 10 z"/>
+    </marker>
+</svg>
 <script src="../quiz.js"></script>
+<script>
+
+    var editor = CodeMirror.fromTextArea(jscode, {
+        lineNumbers: true
+    });
+</script>
 </body>
 </html>
