@@ -68,11 +68,15 @@ pre {
     list-style-type: lower-alpha;
 }
 
-.flex{
+.flex {
     display: flex;
 }
 
-.highlight{
+.highlight {
     background: var(--highlight);
     padding: 5px;
+}
+
+#contents {
+    min-width: 30%;
 }
