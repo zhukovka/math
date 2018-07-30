@@ -68,6 +68,10 @@ pre {
     list-style-type: lower-alpha;
 }
 
+.upper-alpha {
+    list-style-type: upper-alpha;
+}
+
 .flex {
     display: flex;
 }
@@ -79,4 +83,8 @@ pre {
 
 #contents {
     min-width: 30%;
+}
+
+.hidden {
+    display: none;
 }

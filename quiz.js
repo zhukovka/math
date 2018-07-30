@@ -1,7 +1,5 @@
-loadAnswers();
-
 async function loadAnswers () {
-    const answers = await fetch(window.location.pathname + "a.json").then(r => r.json());
+    const answers = await fetch("./a.json").then(r => r.json());
     const quizForm = document.forms["quiz"];
     const results = document.getElementById("results");
     if (quizForm && results) {
@@ -21,3 +19,39 @@ async function loadAnswers () {
         })
     }
 }
+
+function shuffle (array) {
+    let shuffledArray = [];
+    while (array.length) {
+        let i = Math.random() * (array.length) | 0;
+        let splice = array.splice(i, 1);
+        shuffledArray.push(splice[0]);
+    }
+    return shuffledArray;
+}
+
+function shuffleQuestions (questionLists) {
+    for (const questions of questionLists) {
+        const q = shuffle([...questions.children]);
+        const fragment = document.createDocumentFragment();
+        questions.innerHTML = "";
+        for (const el of q) {
+            fragment.appendChild(el);
+        }
+        questions.appendChild(fragment);
+    }
+
+}
+
+const questionsTemplate = document.getElementById("questionsTemplate");
+if (questionsTemplate) {
+    const cloneTemplate = document.importNode(questionsTemplate.content, true);
+    const questionLists = cloneTemplate.querySelectorAll(".questions");
+    shuffleQuestions(questionLists);
+    const questionContainers = document.querySelectorAll(".questionsContainer");
+    for (let i = 0; i < questionContainers.length; i++) {
+        const container = questionContainers[i];
+        container.appendChild(questionLists[i]);
+    }
+}
+loadAnswers();

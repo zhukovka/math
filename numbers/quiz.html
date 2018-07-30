@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Numbers Quiz</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<section>
+    <div class="quiz">
+        <form name="quiz">
+            <fieldset>
+                <legend>Concepts and Vocabulary</legend>
+
+                <div class="flex">
+                    <div class="questionsContainer">
+
+                    </div>
+                    <div class="answersContainer">
+                        <ol class="upper-alpha options">
+                            <li><p><i>a = a</i></p></li>
+                            <li><p>if <i>a = b</i> then <i>b = a</i></p></li>
+                            <li><p>if <i>a = b</i> and <i>b = c</i> then <i>a = c</i></p></li>
+                            <li><p>if <i>a = b</i> then we may substitute <i>b</i> for <i>a</i></p></li>
+                            <li>
+                                <p><i>a + b = b + a</i></p>
+                                <p><i>a × b = b × a</i></p>
+                            </li>
+                            <li>
+                                <p><i>a + (b + c) = (a + b) + c = a + b + c</i></p>
+                                <p><i>a × (b × c) = (a × b) × c = a × b × c</i></p>
+                            </li>
+                            <li><p><i>(a + b) × c = a × c + b × c</i></p></li>
+                            <li>
+                                <p><i>0 + a = a + 0 = a</i></p>
+                                <p><i>a × 1 = 1 × a = a</i></p></li>
+
+                        </ol>
+                    </div>
+                </div>
+            </fieldset>
+            <input type="submit">
+        </form>
+        <div id="results"></div>
+    </div>
+</section>
+<template id="questionsTemplate">
+    <ol class="questions">
+        <li>
+            <p>The <b>reflexive property</b> <input type="text" name="a1"></p>
+        </li>
+        <li>
+            <p>The <b>symmetric property</b> <input type="text" name="a2"></p>
+        </li>
+        <li>
+            <p>The <b>transitive property</b> <input type="text" name="a3"></p>
+        </li>
+        <li>
+            <p>The <b>principle of substitution</b> <input type="text" name="a4"></p>
+        </li>
+        <li>
+            <p><b>Commutative Properties:</b> <input type="text" name="a5"></p>
+        </li>
+        <li>
+            <p><b>Associative properties:</b> <input type="text" name="a6"></p>
+        </li>
+        <li>
+            <p><b>Distributive property</b> <input type="text" name="a7"></p>
+        </li>
+        <li>
+            <p><b>Identity Properties</b> <input type="text" name="a8"></p>
+        </li>
+    </ol>
+</template>
+<script src="../quiz.js"></script>
+</body>
+</html>
