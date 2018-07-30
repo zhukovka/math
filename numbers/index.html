@@ -7,429 +7,472 @@
 </head>
 <body>
 <h1 class="center">Classify numbers</h1>
-<section>
-    <article>
-        <p>It is helpful to classify the various kind of numbers that we deal with as sets.
+<div class="flex">
+    <main>
+        <section>
+            <article>
+                <p>It is helpful to classify the various kind of numbers that we deal with as sets.
 
-            The counting numbers, or <b>natural numbers</b>, are the numbers in the set {1, 2, 3, 4 ...}. (The three
-            dots, called an <b>ellipsis</b>, indicate that the pattern continues indefinitely.)
-        </p>
-        <p>The <b>integers</b> are the set of numbers {... , -3, -2, -1, 0, 1, 2, 3, ...}.</p>
-        <p>
-            A rational number is a number that can be expressed as a quotient
-            <svg width="1ch" height="3ch" style="position: relative; top: 1ch">
-                <g font-style="italic">
-                    <text x="0" y="10">a</text>
-                    <text x="0" y="10">_</text>
-                    <text x="0" y="30">b</text>
-                </g>
-            </svg>
-            of two integers. The integer <b>a</b> is called the
-            <b>numerator</b>, and the integer <b>b</b>, which cannot be 0 is called the <b>denominator</b>.
-        </p>
-        <svg width="100%" height="40" xmlns="http://www.w3.org/2000/svg">
-            <text x="80" y="20" font-style="italic">a</text>
-            <text x="120" y="20" class="hand">⟵ numerator</text>
-            <text x="79" y="20">_</text>
-            <text x="80" y="40" font-style="italic">b</text>
-            <text x="120" y="40" class="hand">⟵ denominator</text>
-        </svg>
-        <p>
-            Since
-            <svg width="5ch" height="3ch" style="position: relative; top: 1ch">
-                <g font-style="italic">
-                    <text x="0" y="10">a</text>
-                    <text x="0" y="20">− = a</text>
-                    <text x="0" y="30">1</text>
-                </g>
-            </svg>
-            for any integer <i>a</i>, it follows that the set of integers is a subset of the set of rational numbers.
-        </p>
-        <svg width="100%" height="250">
-            <g>
-                <rect x="20" y="0" width="180" height="200" fill="antiquewhite"/>
-                <text x="30" y="20">All numbers</text>
-                <circle cx="110" cy="110" r="80" fill="none" stroke="red" stroke-width="1"/>
-                <text x="40" y="90">A</text>
-                <circle cx="110" cy="110" r="40" fill="none" stroke="green" stroke-width="1"/>
-                <text x="90" y="100">B</text>
-                <text x="30" y="220">subset A ⊆ B</text>
-                <text x="240" y="20">A - rational numbers</text>
-                <text x="240" y="40">B - integers</text>
-
-            </g>
-        </svg>
-        <p>Rational numbers may be represented as <b>decimals</b>. It can be
-            shown that every rational number may be represented by a decimal that either terminates or is nonterminating
-            with a repeating block of digits, and vice versa.</p>
-        <svg width="100%" height="100">
-            <g>
-                <text x="20" y="15">3</text>
-                <text x="20" y="25">− = 0.75</text>
-                <text x="20" y="35">4</text>
-            </g>
-            <g>
-                <text x="120" y="15">2</text>
-                <text x="120" y="25">− = 0.666...</text>
-                <text x="120" y="35">3</text>
-            </g>
-        </svg>
-        <p>
-            On the other hand, some decimals do not fit into either of these categories. Such decimals represent
-            <b>irrational</b> numbers. Every irrational number may be represented by a decimal that <b>neither repeats
-            nor terminates</b>. In other words, irrational numbers
-            cannot be written in the form
-            <svg width="1ch" height="3ch" style="position: relative; top: 1ch">
-                <g font-style="italic">
-                    <text x="0" y="10">a</text>
-                    <text x="0" y="10">_</text>
-                    <text x="0" y="30">b</text>
-                </g>
-            </svg>
-            , where <i>a</i>, <i>b</i> are integers and b ≠ 0.
-        </p>
-        <p>The set of <b>real numbers</b> is the union of the set of rational numbers with the set of irrational
-            numbers.</p>
-        <svg width="100%" height="300">
-            <text x="150" y="15">Real numbers</text>
-            <rect x="0" y="30" height="300" width="200" fill="lavender"></rect>
-            <text x="50" y="60">Irrational</text>
-            <text x="50" y="80">numbers</text>
-            <rect x="200" y="30" height="300" width="300" fill="antiquewhite"></rect>
-            <text x="275" y="60">Rational numbers</text>
-            <circle cx="350" cy="175" r="100" fill="lightblue"/>
-            <line x1="420" y1="120" x2="520" y2="80" stroke="black"/>
-            <text x="525" y="80">Integers</text>
-            <circle cx="350" cy="175" r="70" fill="darksalmon"/>
-            <line x1="410" y1="170" x2="520" y2="140" stroke="black"/>
-            <text x="525" y="140">Whole numbers</text>
-            <circle cx="350" cy="175" r="40" fill="khaki"/>
-            <line x1="370" y1="190" x2="520" y2="220" stroke="black"/>
-            <text x="525" y="220">Natural numbers</text>
-        </svg>
-        <div class="quiz">
-            <p>List the numbers in the set</p>
-            <svg width="100%" height="80">
-                <text x="20" y="20">⎧</text>
-                <text x="20" y="39">⎨</text>
-                <text x="20" y="58">⎩</text>
-                <text x="30" y="36">-3,</text>
-                <g>
-                    <text x="60" y="26">2</text>
-                    <text x="60" y="36">−,</text>
-                    <text x="60" y="46">3</text>
-                </g>
-                <text x="80" y="36">0.12, √2, 𝜋, 10, 2.151515...</text>
-                <text y="20" x="300">⎫</text>
-                <text y="39" x="300">⎬</text>
-                <text y="58" x="300">⎭</text>
-            </svg>
-            <p>that are:</p>
-            <ol class="lower-alpha">
-                <li>Natural numbers</li>
-                <li>Integers</li>
-                <li>Rational numbers</li>
-                <li>Irrational numbers</li>
-                <li>Real numbers</li>
-            </ol>
-        </div>
-    </article>
-    <article>
-        <h3>Approximations</h3>
-        <p>
-            The decimal representation of an irrational number is given as an approximation. For example, using the
-            symbol ≈ (read as “approximately equal to”), we can write
-        </p>
-        <p>
-            √2 ≈ 1.4142
-        </p>
-        <p>
-            In approximating decimals, we either <b>round off</b> or <b>truncate</b> to a given number of decimal
-            places.
-        </p>
-        <p>
-            <b>Truncation</b>: Drop all the digits that follow the specified final digit in the decimal.
-        </p>
-        <p>
-            <b>Rounding</b>: Identify the specified final digit in the decimal. If the next digit is 5 or more, add 1 to
-            the final digit; if the next digit is 4 or less, leave the final digit as it is. Then truncate following the
-            final digit.
-        </p>
-    </article>
-    <article>
-        <h3>Rules for the Order of Operations</h3>
-        <ol>
-            <li>Begin with the innermost parentheses and work outward. Remember that in dividing two expressions the
-                numerator and denominator are treated as if they were enclosed in parentheses.
-            </li>
-            <li>
-                Perform multiplications and divisions, working from left to right.
-            </li>
-            <li>Perform additions and subtractions, working from left to right.</li>
-        </ol>
-    </article>
-    <article>
-        <h3>Properties of Real Numbers</h3>
-        <ol>
-            <li>
-                <p>The <b>reflexive property</b> states that a number always equals itself; that is, <i>a = a</i>.</p>
-            </li>
-
-            <li>
-                <p>The <b>symmetric property</b> states that if <i>a = b</i> then <i>b = a</i>.</p>
-            </li>
-
-            <li><p>The <b>transitive property</b> states that if <i>a = b</i> and <i>b = c</i> then <i>a = c</i>.</p>
-            </li>
-            <li>
-                <p>The <b>principle of substitution</b> states that if <i>a = b</i> then we may substitute <i>b</i>
-                for <i>a</i> in any expression containing <i>a</i>.</p>
-            </li>
-            <li>
-                <p>
-                    <b>Commutative Properties:</b> the order in which addition or multiplication takes place will not
-                    affect
-                    the final result.
+                    The counting numbers, or <b>natural numbers</b>, are the numbers in the set {1, 2, 3, 4 ...}. (The
+                    three
+                    dots, called an <b>ellipsis</b>, indicate that the pattern continues indefinitely.)
                 </p>
-                <ul>
-                    <li>
-                        <i>a + b = b + a</i>
-                    </li>
-                    <li>
-                        <i>a × b = b × a</i>
-                    </li>
-                </ul>
-            </li>
-            <li>
+                <p>The <b>integers</b> are the set of numbers {... , -3, -2, -1, 0, 1, 2, 3, ...}.</p>
                 <p>
-                    <b>Associative properties:</b> the way we add or multiply three real numbers will not affect the
-                    final
-                    result.
-                </p>
-                <ul>
-                    <li>
-                        <i>a + (b + c) = (a + b) + c = a + b + c</i>
-                    </li>
-                    <li>
-                        <i>a × (b × c) = (a × b) × c = a × b × c</i>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <p>
-                    <b>Distributive property</b>
-                </p>
-                <ul>
-                    <li>
-                        <i>(a + b) × c = a × c + b × c</i>
-                    </li>
-                </ul>
-                <p>
-                    The <b>distributive property</b> may be used in two different ways.
-                </p>
-                <ul class="lower-alpha">
-                    <li><i>2 × (x + 3) = 2 × x + 2 × 3 = 2x + 6</i> <span
-                            class="hand">⟵ Use to remove parentheses</span></li>
-                    <li><i>3x + 5x = (3 + 5)x = 8x</i> <span class="hand">⟵ Use to combine two expressions</span></li>
-                </ul>
-            </li>
-            <li>
-                <p><b>Identity Properties:</b></p>
-                <ul>
-                    <li><i>0 + a = a + 0 = a</i></li>
-                    <li><i>a × 1 = 1 × a = a</i></li>
-                </ul>
-                <p>We call <b>0</b> the <b>additive identity</b> and <b>1</b> the <b>multiplicative identity</b>.</p>
-            </li>
-            <li>
-                <p><b>Additive Inverse Property</b></p>
-                <p>For each real number <i>a</i>, there is a real number <i>-a</i>, called the <b>additive inverse</b>
-                    of <i>a</i>, having the following property:</p>
-                <p>
-                    <i>a + (-a) = -a + a = 0</i>
-                </p>
-                <p>
-                    For each nonzero real number <i>a</i>, there is a real number
+                    A rational number is a number that can be expressed as a quotient
                     <svg width="1ch" height="3ch" style="position: relative; top: 1ch">
-                        <g>
-                            <text x="2" y="10">1</text>
-                            <text x="0" y="13">_</text>
-                            <text x="0" y="30" font-style="italic">a</text>
+                        <g font-style="italic">
+                            <text x="0" y="10">a</text>
+                            <text x="0" y="10">_</text>
+                            <text x="0" y="30">b</text>
                         </g>
                     </svg>
-                    , called the <b>multiplicative inverse</b> of <i>a</i>, having the following property:
+                    of two integers. The integer <b>a</b> is called the
+                    <b>numerator</b>, and the integer <b>b</b>, which cannot be 0 is called the <b>denominator</b>.
+                </p>
+                <svg width="100%" height="40" xmlns="http://www.w3.org/2000/svg">
+                    <text x="80" y="20" font-style="italic">a</text>
+                    <text x="120" y="20" class="hand">⟵ numerator</text>
+                    <text x="79" y="20">_</text>
+                    <text x="80" y="40" font-style="italic">b</text>
+                    <text x="120" y="40" class="hand">⟵ denominator</text>
+                </svg>
+                <p>
+                    Since
+                    <svg width="5ch" height="3ch" style="position: relative; top: 1ch">
+                        <g font-style="italic">
+                            <text x="0" y="10">a</text>
+                            <text x="0" y="20">− = a</text>
+                            <text x="0" y="30">1</text>
+                        </g>
+                    </svg>
+                    for any integer <i>a</i>, it follows that the set of integers is a subset of the set of rational
+                    numbers.
+                </p>
+                <svg width="100%" height="250">
+                    <g>
+                        <rect x="20" y="0" width="180" height="200" fill="antiquewhite"/>
+                        <text x="30" y="20">All numbers</text>
+                        <circle cx="110" cy="110" r="80" fill="none" stroke="red" stroke-width="1"/>
+                        <text x="40" y="90">A</text>
+                        <circle cx="110" cy="110" r="40" fill="none" stroke="green" stroke-width="1"/>
+                        <text x="90" y="100">B</text>
+                        <text x="30" y="220">subset A ⊆ B</text>
+                        <text x="240" y="20">A - rational numbers</text>
+                        <text x="240" y="40">B - integers</text>
+
+                    </g>
+                </svg>
+                <p>Rational numbers may be represented as <b>decimals</b>. It can be
+                    shown that every rational number may be represented by a decimal that either terminates or is
+                    nonterminating
+                    with a repeating block of digits, and vice versa.</p>
+                <svg width="100%" height="100">
+                    <g>
+                        <text x="20" y="15">3</text>
+                        <text x="20" y="25">− = 0.75</text>
+                        <text x="20" y="35">4</text>
+                    </g>
+                    <g>
+                        <text x="120" y="15">2</text>
+                        <text x="120" y="25">− = 0.666...</text>
+                        <text x="120" y="35">3</text>
+                    </g>
+                </svg>
+                <p>
+                    On the other hand, some decimals do not fit into either of these categories. Such decimals represent
+                    <b>irrational</b> numbers. Every irrational number may be represented by a decimal that <b>neither
+                    repeats
+                    nor terminates</b>. In other words, irrational numbers
+                    cannot be written in the form
+                    <svg width="1ch" height="3ch" style="position: relative; top: 1ch">
+                        <g font-style="italic">
+                            <text x="0" y="10">a</text>
+                            <text x="0" y="10">_</text>
+                            <text x="0" y="30">b</text>
+                        </g>
+                    </svg>
+                    , where <i>a</i>, <i>b</i> are integers and b ≠ 0.
+                </p>
+                <p>The set of <b>real numbers</b> is the union of the set of rational numbers with the set of irrational
+                    numbers.</p>
+                <svg width="100%" height="300">
+                    <text x="150" y="15">Real numbers</text>
+                    <rect x="0" y="30" height="300" width="200" fill="lavender"></rect>
+                    <text x="50" y="60">Irrational</text>
+                    <text x="50" y="80">numbers</text>
+                    <rect x="200" y="30" height="300" width="300" fill="antiquewhite"></rect>
+                    <text x="275" y="60">Rational numbers</text>
+                    <circle cx="350" cy="175" r="100" fill="lightblue"/>
+                    <line x1="420" y1="120" x2="520" y2="80" stroke="black"/>
+                    <text x="525" y="80">Integers</text>
+                    <circle cx="350" cy="175" r="70" fill="darksalmon"/>
+                    <line x1="410" y1="170" x2="520" y2="140" stroke="black"/>
+                    <text x="525" y="140">Whole numbers</text>
+                    <circle cx="350" cy="175" r="40" fill="khaki"/>
+                    <line x1="370" y1="190" x2="520" y2="220" stroke="black"/>
+                    <text x="525" y="220">Natural numbers</text>
+                </svg>
+                <div class="quiz">
+                    <p>List the numbers in the set</p>
+                    <svg width="100%" height="80">
+                        <text x="20" y="20">⎧</text>
+                        <text x="20" y="39">⎨</text>
+                        <text x="20" y="58">⎩</text>
+                        <text x="30" y="36">-3,</text>
+                        <g>
+                            <text x="60" y="26">2</text>
+                            <text x="60" y="36">−,</text>
+                            <text x="60" y="46">3</text>
+                        </g>
+                        <text x="80" y="36">0.12, √2, 𝜋, 10, 2.151515...</text>
+                        <text y="20" x="300">⎫</text>
+                        <text y="39" x="300">⎬</text>
+                        <text y="58" x="300">⎭</text>
+                    </svg>
+                    <p>that are:</p>
+                    <ol class="lower-alpha">
+                        <li>Natural numbers</li>
+                        <li>Integers</li>
+                        <li>Rational numbers</li>
+                        <li>Irrational numbers</li>
+                        <li>Real numbers</li>
+                    </ol>
+                </div>
+            </article>
+            <article>
+                <h3>Approximations</h3>
+                <p>
+                    The decimal representation of an irrational number is given as an approximation. For example, using
+                    the
+                    symbol ≈ (read as “approximately equal to”), we can write
+                </p>
+                <p>
+                    √2 ≈ 1.4142
+                </p>
+                <p>
+                    In approximating decimals, we either <b>round off</b> or <b>truncate</b> to a given number of
+                    decimal
+                    places.
+                </p>
+                <p>
+                    <b>Truncation</b>: Drop all the digits that follow the specified final digit in the decimal.
+                </p>
+                <p>
+                    <b>Rounding</b>: Identify the specified final digit in the decimal. If the next digit is 5 or more,
+                    add
+                    1 to
+                    the final digit; if the next digit is 4 or less, leave the final digit as it is. Then truncate
+                    following
+                    the
+                    final digit.
+                </p>
+            </article>
+            <article>
+                <h3>Rules for the Order of Operations</h3>
+                <ol>
+                    <li>Begin with the innermost parentheses and work outward. Remember that in dividing two expressions
+                        the
+                        numerator and denominator are treated as if they were enclosed in parentheses.
+                    </li>
+                    <li>
+                        Perform multiplications and divisions, working from left to right.
+                    </li>
+                    <li>Perform additions and subtractions, working from left to right.</li>
+                </ol>
+            </article>
+            <article>
+                <h3>Properties of Real Numbers</h3>
+                <ol>
+                    <li>
+                        <p>The <b>reflexive property</b> states that a number always equals itself; that is, <i>a =
+                            a</i>.
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>The <b>symmetric property</b> states that if <i>a = b</i> then <i>b = a</i>.</p>
+                    </li>
+
+                    <li><p>The <b>transitive property</b> states that if <i>a = b</i> and <i>b = c</i> then <i>a = c</i>.
+                    </p>
+                    </li>
+                    <li>
+                        <p>The <b>principle of substitution</b> states that if <i>a = b</i> then we may substitute
+                            <i>b</i>
+                            for <i>a</i> in any expression containing <i>a</i>.</p>
+                    </li>
+                    <li>
+                        <p>
+                            <b>Commutative Properties:</b> the order in which addition or multiplication takes place
+                            will
+                            not
+                            affect
+                            the final result.
+                        </p>
+                        <ul>
+                            <li>
+                                <i>a + b = b + a</i>
+                            </li>
+                            <li>
+                                <i>a × b = b × a</i>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>
+                            <b>Associative properties:</b> the way we add or multiply three real numbers will not affect
+                            the
+                            final
+                            result.
+                        </p>
+                        <ul>
+                            <li>
+                                <i>a + (b + c) = (a + b) + c = a + b + c</i>
+                            </li>
+                            <li>
+                                <i>a × (b × c) = (a × b) × c = a × b × c</i>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>
+                            <b>Distributive property</b>
+                        </p>
+                        <ul>
+                            <li>
+                                <i>(a + b) × c = a × c + b × c</i>
+                            </li>
+                        </ul>
+                        <p>
+                            The <b>distributive property</b> may be used in two different ways.
+                        </p>
+                        <ul class="lower-alpha">
+                            <li><i>2 × (x + 3) = 2 × x + 2 × 3 = 2x + 6</i> <span
+                                    class="hand">⟵ Use to remove parentheses</span></li>
+                            <li><i>3x + 5x = (3 + 5)x = 8x</i> <span
+                                    class="hand">⟵ Use to combine two expressions</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p><b>Identity Properties:</b></p>
+                        <ul>
+                            <li><i>0 + a = a + 0 = a</i></li>
+                            <li><i>a × 1 = 1 × a = a</i></li>
+                        </ul>
+                        <p>We call <b>0</b> the <b>additive identity</b> and <b>1</b> the <b>multiplicative identity</b>.
+                        </p>
+                    </li>
+                    <li>
+                        <p><b>Additive Inverse Property</b></p>
+                        <p>For each real number <i>a</i>, there is a real number <i>-a</i>, called the <b>additive
+                            inverse</b>
+                            of <i>a</i>, having the following property:</p>
+                        <p>
+                            <i>a + (-a) = -a + a = 0</i>
+                        </p>
+                        <p>
+                            For each nonzero real number <i>a</i>, there is a real number
+                            <svg width="1ch" height="3ch" style="position: relative; top: 1ch">
+                                <g>
+                                    <text x="2" y="10">1</text>
+                                    <text x="0" y="13">_</text>
+                                    <text x="0" y="30" font-style="italic">a</text>
+                                </g>
+                            </svg>
+                            , called the <b>multiplicative inverse</b> of <i>a</i>, having the following property:
+                        </p>
+                        <svg width="100%" height="40" font-style="italic">
+                            <text x="20" y="25">a ×</text>
+                            <g>
+                                <text x="53" y="15">1</text>
+                                <text x="50" y="25">− =</text>
+                                <text x="50" y="35">a</text>
+                            </g>
+                            <g>
+                                <text x="88" y="15">1</text>
+                                <text x="85" y="25">− × a = 1</text>
+                                <text x="85" y="35">a</text>
+                            </g>
+                            <text x="185" y="25">if a ≠ 0</text>
+                        </svg>
+                        <p>The multiplicative inverse
+                            <svg width="1ch" height="3ch" style="position: relative; top: 1ch">
+                                <g>
+                                    <text x="2" y="10">1</text>
+                                    <text x="0" y="13">_</text>
+                                    <text x="0" y="30" font-style="italic">a</text>
+                                </g>
+                            </svg>
+                            of a nonzero real number <i>a</i> is also referred to as the <b>reciprocal</b> of <i>a</i>.
+                        </p>
+                    </li>
+                </ol>
+
+                <p>
+                    The <b>difference</b> <i>a - b</i>, also read “a less b” or “a minus b,” is defined as
+                </p>
+                <p><i>a - b = a + (-b)</i></p>
+                <p>To subtract <i>b</i> from <i>a</i>, add the opposite of <i>b</i> to <i>a</i>.</p>
+                <p>
+                    If <i>b</i> is a nonzero real number, the quotient
+                    <svg width="1ch" height="3ch" style="position: relative; top: 1ch">
+                        <g font-style="italic">
+                            <text x="0" y="10">a</text>
+                            <text x="0" y="10">_</text>
+                            <text x="0" y="30">b</text>
+                        </g>
+                    </svg>
+                    , also read as “<i>a</i> divided by <i>b</i>”
+                    or “the ratio of <i>a</i> to <i>b</i>,” is defined as
                 </p>
                 <svg width="100%" height="40" font-style="italic">
-                    <text x="20" y="25">a ×</text>
                     <g>
-                        <text x="53" y="15">1</text>
-                        <text x="50" y="25">− =</text>
-                        <text x="50" y="35">a</text>
+                        <text x="20" y="15">a</text>
+                        <text x="20" y="23">− =</text>
+                        <text x="20" y="35">b</text>
                     </g>
+                    <text x="55" y="23">a ×</text>
                     <g>
                         <text x="88" y="15">1</text>
-                        <text x="85" y="25">− × a = 1</text>
-                        <text x="85" y="35">a</text>
+                        <text x="85" y="23">−</text>
+                        <text x="85" y="35">b</text>
                     </g>
-                    <text x="185" y="25">if a ≠ 0</text>
+                    <text x="185" y="25">if b ≠ 0</text>
                 </svg>
-                <p>The multiplicative inverse
-                    <svg width="1ch" height="3ch" style="position: relative; top: 1ch">
-                        <g>
-                            <text x="2" y="10">1</text>
-                            <text x="0" y="13">_</text>
-                            <text x="0" y="30" font-style="italic">a</text>
-                        </g>
-                    </svg>
-                    of a nonzero real number <i>a</i> is also referred to as the <b>reciprocal</b> of <i>a</i>.
-                </p>
-            </li>
-        </ol>
 
-        <p>
-            The <b>difference</b> <i>a - b</i>, also read “a less b” or “a minus b,” is defined as
-        </p>
-        <p><i>a - b = a + (-b)</i></p>
-        <p>To subtract <i>b</i> from <i>a</i>, add the opposite of <i>b</i> to <i>a</i>.</p>
-        <p>
-            If <i>b</i> is a nonzero real number, the quotient
-            <svg width="1ch" height="3ch" style="position: relative; top: 1ch">
-                <g font-style="italic">
-                    <text x="0" y="10">a</text>
-                    <text x="0" y="10">_</text>
-                    <text x="0" y="30">b</text>
-                </g>
-            </svg>
-            , also read as “<i>a</i> divided by <i>b</i>”
-            or “the ratio of <i>a</i> to <i>b</i>,” is defined as
-        </p>
-        <svg width="100%" height="40" font-style="italic">
-            <g>
-                <text x="20" y="15">a</text>
-                <text x="20" y="23">− =</text>
-                <text x="20" y="35">b</text>
-            </g>
-            <text x="55" y="23">a ×</text>
-            <g>
-                <text x="88" y="15">1</text>
-                <text x="85" y="23">−</text>
-                <text x="85" y="35">b</text>
-            </g>
-            <text x="185" y="25">if b ≠ 0</text>
-        </svg>
+                <p><b>Cancellation Properties</b></p>
+                <svg width="100%" height="20">
+                    <text x="20" y="15" font-style="italic">ac = bc</text>
+                    <text x="8ch" y="15">implies a = b</text>
+                    <text x="225" y="15">if</text>
+                    <text x="255" y="15" font-style="italic">c ≠ 0</text>
+                </svg>
+                <svg width="100%" height="40">
+                    <g>
+                        <text x="20" y="15" font-style="italic">ac</text>
+                        <text x="20" y="23">⎯ =</text>
+                        <text x="20" y="35" font-style="italic">bc</text>
+                    </g>
+                    <g>
+                        <text x="5ch" y="15" font-style="italic">a</text>
+                        <text x="5ch" y="23">−</text>
+                        <text x="5ch" y="35" font-style="italic">b</text>
+                    </g>
+                    <text x="225" y="25">if</text>
+                    <text x="255" y="25" font-style="italic">b ≠ 0, c ≠ 0</text>
+                </svg>
 
-        <p><b>Cancellation Properties</b></p>
-        <svg width="100%" height="20">
-            <text x="20" y="15" font-style="italic">ac = bc</text>
-            <text x="8ch" y="15">implies a = b</text>
-            <text x="225" y="15">if</text>
-            <text x="255" y="15" font-style="italic">c ≠ 0</text>
-        </svg>
-        <svg width="100%" height="40">
-            <g>
-                <text x="20" y="15" font-style="italic">ac</text>
-                <text x="20" y="23">⎯ =</text>
-                <text x="20" y="35" font-style="italic">bc</text>
-            </g>
-            <g>
-                <text x="5ch" y="15" font-style="italic">a</text>
-                <text x="5ch" y="23">−</text>
-                <text x="5ch" y="35" font-style="italic">b</text>
-            </g>
-            <text x="225" y="25">if</text>
-            <text x="255" y="25" font-style="italic">b ≠ 0, c ≠ 0</text>
-        </svg>
+                <p><b>Zero-Product Property</b></p>
+                <p>If <i>ab = 0</i>, then <i>a = 0</i>, or <i>b = 0</i>, or both.</p>
 
-        <p><b>Zero-Product Property</b></p>
-        <p>If <i>ab = 0</i>, then <i>a = 0</i>, or <i>b = 0</i>, or both.</p>
+                <p><b>Arithmetic of Quotients</b></p>
+                <svg width="100%" height="40">
+                    <g>
+                        <text x="20" y="15" font-style="italic">a</text>
+                        <text x="20" y="23">− +</text>
+                        <text x="20" y="35" font-style="italic">b</text>
+                    </g>
+                    <g>
+                        <text x="55" y="15" font-style="italic">c</text>
+                        <text x="55" y="23">− =</text>
+                        <text x="55" y="35" font-style="italic">d</text>
+                    </g>
+                    <g>
+                        <text x="90" y="15" font-style="italic">ad</text>
+                        <text x="90" y="23">⎯ +</text>
+                        <text x="90" y="35" font-style="italic">bd</text>
+                    </g>
+                    <g>
+                        <text x="130" y="15" font-style="italic">cb</text>
+                        <text x="130" y="23">⎯ =</text>
+                        <text x="130" y="35" font-style="italic">bd</text>
+                    </g>
+                    <g>
+                        <text x="170" y="15" font-style="italic">ad + cb</text>
+                        <text x="173" y="23">⎯⎯⎯</text>
+                        <text x="190" y="35" font-style="italic">bd</text>
+                    </g>
 
-        <p><b>Arithmetic of Quotients</b></p>
-        <svg width="100%" height="40">
-            <g>
-                <text x="20" y="15" font-style="italic">a</text>
-                <text x="20" y="23">− +</text>
-                <text x="20" y="35" font-style="italic">b</text>
-            </g>
-            <g>
-                <text x="55" y="15" font-style="italic">c</text>
-                <text x="55" y="23">− =</text>
-                <text x="55" y="35" font-style="italic">d</text>
-            </g>
-            <g>
-                <text x="90" y="15" font-style="italic">ad</text>
-                <text x="90" y="23">⎯ +</text>
-                <text x="90" y="35" font-style="italic">bd</text>
-            </g>
-            <g>
-                <text x="130" y="15" font-style="italic">cb</text>
-                <text x="130" y="23">⎯ =</text>
-                <text x="130" y="35" font-style="italic">bd</text>
-            </g>
-            <g>
-                <text x="170" y="15" font-style="italic">ad + cb</text>
-                <text x="173" y="23">⎯⎯⎯</text>
-                <text x="190" y="35" font-style="italic">bd</text>
-            </g>
+                    <text x="255" y="25">if</text>
+                    <text x="285" y="25" font-style="italic">b ≠ 0, d ≠ 0</text>
+                </svg>
+                <svg width="100%" height="40">
+                    <g>
+                        <text x="20" y="15" font-style="italic">a</text>
+                        <text x="20" y="23">− ×</text>
+                        <text x="20" y="35" font-style="italic">b</text>
+                    </g>
+                    <g>
+                        <text x="55" y="15" font-style="italic">c</text>
+                        <text x="55" y="23">− =</text>
+                        <text x="55" y="35" font-style="italic">d</text>
+                    </g>
+                    <g>
+                        <text x="90" y="15" font-style="italic">ac</text>
+                        <text x="90" y="23">⎯</text>
+                        <text x="90" y="35" font-style="italic">bd</text>
+                    </g>
 
-            <text x="255" y="25">if</text>
-            <text x="285" y="25" font-style="italic">b ≠ 0, d ≠ 0</text>
-        </svg>
-        <svg width="100%" height="40">
-            <g>
-                <text x="20" y="15" font-style="italic">a</text>
-                <text x="20" y="23">− ×</text>
-                <text x="20" y="35" font-style="italic">b</text>
-            </g>
-            <g>
-                <text x="55" y="15" font-style="italic">c</text>
-                <text x="55" y="23">− =</text>
-                <text x="55" y="35" font-style="italic">d</text>
-            </g>
-            <g>
-                <text x="90" y="15" font-style="italic">ac</text>
-                <text x="90" y="23">⎯</text>
-                <text x="90" y="35" font-style="italic">bd</text>
-            </g>
+                    <text x="255" y="25">if</text>
+                    <text x="285" y="25" font-style="italic">b ≠ 0, d ≠ 0</text>
+                </svg>
+                <svg width="100%" height="80">
+                    <g>
+                        <text x="20" y="15" font-style="italic">a</text>
+                        <text x="20" y="23">−</text>
+                        <text x="20" y="35" font-style="italic">b</text>
+                    </g>
+                    <text x="18" y="45" font-weight="bold">⎯ =</text>
+                    <g>
+                        <text x="20" y="55" font-style="italic">c</text>
+                        <text x="20" y="63">−</text>
+                        <text x="20" y="75" font-style="italic">d</text>
+                    </g>
+                    <g>
+                        <text x="60" y="35" font-style="italic">a</text>
+                        <text x="60" y="45">− ×</text>
+                        <text x="60" y="60" font-style="italic">b</text>
+                    </g>
+                    <g>
+                        <text x="90" y="35" font-style="italic">d</text>
+                        <text x="90" y="45">− =</text>
+                        <text x="90" y="60" font-style="italic">c</text>
+                    </g>
+                    <g>
+                        <text x="125" y="35" font-style="italic">ad</text>
+                        <text x="125" y="45">⎯</text>
+                        <text x="125" y="60" font-style="italic">bc</text>
+                    </g>
+                    <text x="255" y="45">if</text>
+                    <text x="285" y="45" font-style="italic">b ≠ 0, c ≠ 0, d ≠ 0</text>
+                </svg>
+                <p><b>Finding the Least Common Multiple of Two Numbers</b></p>
+                <p>To find the LCM of 15 and 12, we look at multiples of 15 and 12.</p>
+                <p>15, 30, 45, <span class="blue">60</span>, 75, 90, 105, <span class="blue">120</span>, ...</p>
+                <p>12, 24, 36, 48, <span class="blue">60</span>, 72, 84, 96, 108, <span class="blue">120</span>, ...</p>
+                <p>The common multiples are in blue. The least common multiple is 60.</p>
+            </article>
+        </section>
+    </main>
+    <aside>
+        <div id="contents">
 
-            <text x="255" y="25">if</text>
-            <text x="285" y="25" font-style="italic">b ≠ 0, d ≠ 0</text>
-        </svg>
-        <svg width="100%" height="80">
-            <g>
-                <text x="20" y="15" font-style="italic">a</text>
-                <text x="20" y="23">−</text>
-                <text x="20" y="35" font-style="italic">b</text>
-            </g>
-            <text x="18" y="45" font-weight="bold">⎯ =</text>
-            <g>
-                <text x="20" y="55" font-style="italic">c</text>
-                <text x="20" y="63">−</text>
-                <text x="20" y="75" font-style="italic">d</text>
-            </g>
-            <g>
-                <text x="60" y="35" font-style="italic">a</text>
-                <text x="60" y="45">− ×</text>
-                <text x="60" y="60" font-style="italic">b</text>
-            </g>
-            <g>
-                <text x="90" y="35" font-style="italic">d</text>
-                <text x="90" y="45">− =</text>
-                <text x="90" y="60" font-style="italic">c</text>
-            </g>
-            <g>
-                <text x="125" y="35" font-style="italic">ad</text>
-                <text x="125" y="45">⎯</text>
-                <text x="125" y="60" font-style="italic">bc</text>
-            </g>
-            <text x="255" y="45">if</text>
-            <text x="285" y="45" font-style="italic">b ≠ 0, c ≠ 0, d ≠ 0</text>
-        </svg>
-        <p><b>Finding the Least Common Multiple of Two Numbers</b></p>
-        <p>To find the LCM of 15 and 12, we look at multiples of 15 and 12.</p>
-        <p>15, 30, 45, <span class="blue">60</span>, 75, 90, 105, <span class="blue">120</span>, ...</p>
-        <p>12, 24, 36, 48, <span class="blue">60</span>, 72, 84, 96, 108, <span class="blue">120</span>, ...</p>
-        <p>The common multiples are in blue. The least common multiple is 60.</p>
-    </article>
-</section>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <a href="quiz.html">Quiz</a>
+                </li>
+                <li>
+                    <a href="flash.html">Flash Cards</a>
+                </li>
+            </ul>
+
+        </div>
+    </aside>
+</div>
+<script src="../main.js"></script>
 </body>
 </html>
