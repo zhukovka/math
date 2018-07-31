@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sets Quiz</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<section>
+    <div class="quiz">
+        <form name="quiz">
+            <fieldset>
+                <legend>Concepts and Vocabulary</legend>
+                <div class="flex">
+                    <div class="questionsContainer">
+
+                    </div>
+                    <div class="answersContainer">
+                        <ol class="upper-alpha options double">
+                            <li>
+                                A ⊆ B
+                            </li>
+                            <li>
+                                A ∩ B
+                            </li>
+                            <li>
+                                A ∪ B
+                            </li>
+                            <li>
+                                <span class="complement">A</span>
+                            </li>
+                            <li>
+                                disjoint sets
+                            </li>
+                            <li><span class="complement">A ∩ B</span></li>
+                            <li><span class="complement">B ∪ C</span></li>
+                            <li><span class="complement">A</span> ∪ <span class="complement">B</span></li>
+                        </ol>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Skill Building</legend>
+                <p>In Problems 9–20, use U = universal set = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, A = {1, 3, 4, 5, 9}, B =
+                    {2, 4, 6, 7, 8}, and C = {1, 3, 4, 6} to find each set.</p>
+                <div class="flex">
+                    <div class="questionsContainer">
+
+                    </div>
+                </div>
+            </fieldset>
+            <input type="submit">
+        </form>
+        <div id="results"></div>
+    </div>
+</section>
+<template id="questionsTemplate">
+    <ol class="questions double">
+        <li>
+            A is a subset of B <input type="text" name="a1">
+        </li>
+        <li>
+            intersection of A with B <input type="text" name="a2">
+        </li>
+        <li>
+            union of A with B <input type="text" name="a3">
+        </li>
+        <li>
+            complement of A <input type="text" name="a4">
+        </li>
+        <li>
+            <svg>
+                <g>
+                    <rect x="0" y="0" width="280" height="160" fill="antiquewhite"/>
+                    <text x="10" y="20">Universal set</text>
+                    <circle cx="60" cy="80" r="50" fill="none" stroke="red" stroke-width="1"/>
+                    <text x="55" y="85">A</text>
+                    <circle cx="180" cy="80" r="50" fill="none" stroke="green" stroke-width="1"/>
+                    <text x="175" y="85">B</text>
+                    <text x="10" y="145">A ∩ B = ∅</text>
+                </g>
+            </svg>
+            <input type="text" name="a5">
+        </li>
+        <li>
+            complement of intersect of A and B <input type="text" name="a6">
+        </li>
+        <li>
+            complement of union of B and C <input type="text" name="a7">
+        </li>
+        <li>
+            union of complement of A and complement of B <input type="text" name="a8">
+        </li>
+    </ol>
+    <ol start="9" class="questions double">
+        <li>A ∪ B <input type="text" name="a9"></li>
+        <li>A ∪ C <input type="text" name="a10"></li>
+        <li>A ∩ B <input type="text" name="a11"></li>
+        <li>A ∩ C <input type="text" name="a12"></li>
+        <li>(A ∪ B) ∩ C <input type="text" name="a13"></li>
+        <li>(A ∩ B) ∪ C <input type="text" name="a14"></li>
+        <li><span class="complement">A</span> <input type="text" name="a15"></li>
+        <li><span class="complement">C</span> <input type="text" name="a16"></li>
+        <li><span class="complement">A ∩ B</span> <input type="text" name="a17"></li>
+        <li><span class="complement">B ∪ C</span> <input type="text" name="a18"></li>
+        <li><span class="complement">A</span> ∪ <span class="complement">B</span> <input type="text" name="a19"></li>
+        <li><span class="complement">B</span> ∩ <span class="complement">C</span> <input type="text" name="a20"></li>
+    </ol>
+
+
+
+
+
+
+
+
+
+</template>
+<script src="../quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+http://www.slader.com/textbook/9780321716569-sullivan-algebra-trigonometry-9th-edition/
