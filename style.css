@@ -11,6 +11,10 @@ html {
     /*font-size: var(--unit);*/
 }
 
+body {
+    margin: 0;
+}
+
 h1, h2, h3, h4, h5 {
     font-family: 'Oxygen Mono', monospace;
 }
@@ -76,15 +80,54 @@ pre {
     display: flex;
 }
 
+.flex-end {
+    justify-content: flex-end;
+}
+
 .highlight {
     background: var(--highlight);
     padding: 5px;
 }
 
+section {
+    max-width: 85ch;
+}
+
 aside {
-    min-width: 30%;
+    width: 30%;
 }
 
 .hidden {
     display: none;
+}
+
+article h3 {
+    background-color: gold;
+}
+
+article h5 {
+    background-color: #29d2e94a;
+}
+
+:target {
+    /* @keyframes duration | timing-function | delay | name */
+    animation: 1s ease flash;
+}
+
+@keyframes flash {
+    /*from {*/
+    /*background-color: transparent;*/
+    /*}*/
+    50% {
+        background-color: transparent;
+    }
+    /*to {*/
+    /*background-color: transparent;*/
+    /*}*/
+}
+
+.fixed {
+    position: fixed;
+    overflow: auto;
+    height: 100%;
 }
