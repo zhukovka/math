@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Numbers Quiz</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<section>
+    <div class="quiz">
+        <form name="quiz">
+            <fieldset>
+                <legend>Concepts and Vocabulary</legend>
+
+                <div class="flex">
+                    <div class="questionsContainer">
+
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Skill Building</legend>
+            </fieldset>
+            <input type="submit">
+            <button id="explain" style="display: none">See the explanations</button>
+        </form>
+        <div id="results"></div>
+    </div>
+</section>
+<template id="questionsTemplate">
+    <ol class="questions">
+        <li>
+            <p>The polynomial 3x⁴ - 2x³ + 13x² - 5 is of degree <input type="text" name="a1">.</p>
+            <p>The leading coefficient is <input type="text" name="a2">.</p>
+
+        </li>
+        <li>
+            <p><span class="highlight">(<i>x</i>-a)(<i>x</i>+a) = <i>x</i>² - a²</span> is a <input type="text"
+                                                                                                    name="a3"></p>
+
+        </li>
+        <li>
+            <p><span class="highlight">(<i>x</i> + a)² = <i>x</i>² + 2<i>x</i>a + a²</span> is a <input type="text"
+                                                                                                        name="a4"></p>
+        </li>
+        <li>
+            <p>4x⁻² is a monomial of degree -2.</p>
+            <p>
+                <input type="radio" name="a5" value="T" id="a5T">
+                <label for="a5T">True</label>
+                <input type="radio" name="a5" value="F" id="a5F">
+                <label for="a5F">False</label>
+            </p>
+            <p class="explanation" style="display: none">
+                The degree of a polynomial is the highest degree of its monomials (individual terms) with
+                <span class="highlight">non-zero</span> coefficients.
+            </p>
+        </li>
+        <li>
+            <p>The degree of the product of two nonzero polynomials equals the sum of their degrees.</p>
+            <p>
+                <input type="radio" name="a6" value="T" id="a6T">
+                <label for="a6T">True</label>
+                <input type="radio" name="a6" value="F" id="a6F">
+                <label for="a6F">False</label>
+            </p>
+            <p class="explanation" style="display: none">
+                If one polynomial has degree <i>m</i> such that its power term is <i>xᵐ</i>, and another polynomial has degree <i>n</i>
+                such that its power term is <i>xⁿ</i>, regardless of all other terms, the highest degree term of the new polynomial will be
+                <i>xᵐxⁿ</i> = <i>xᵐ⁺ⁿ</i>, whose degree is the sum of the highest degrees <i>m</i> and <i>n</i>.
+            </p>
+        </li>
+    </ol>
+</template>
+<script src="../quiz.js"></script>
+</body>
+</html>

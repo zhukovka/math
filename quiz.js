@@ -2,6 +2,8 @@ async function loadAnswers () {
     const answers = await fetch("./a.json").then(r => r.json());
     const quizForm = document.forms["quiz"];
     const results = document.getElementById("results");
+    const explain = document.getElementById("explain");
+
     if (quizForm && results) {
         quizForm.addEventListener("submit", (e) => {
             e.preventDefault();
@@ -15,9 +17,23 @@ async function loadAnswers () {
                     correct++;
                 }
             }
-            results.innerHTML = `${correct} out of ${keys.length} correct`
+            results.innerHTML = `${correct} out of ${keys.length} correct`;
+            if (explain) {
+                explain.style.removeProperty("display");
+            }
         })
     }
+
+    if (explain) {
+
+        explain.addEventListener("click", e => {
+            const explanations = document.querySelectorAll(".explanation");
+            for (const explanation of explanations) {
+                explanation.style.removeProperty("display");
+            }
+        });
+    }
+
 }
 
 function shuffle (array) {
