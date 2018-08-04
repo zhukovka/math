@@ -21,6 +21,7 @@ h1, h2, h3, h4, h5 {
 main {
     max-width: 100%;
 }
+
 article {
     font-size: 1.2rem;
 }
@@ -29,15 +30,18 @@ svg {
     overflow: visible;
 }
 
-.svgContainer{
+p {
+    line-height: 1.5;
+}
+
+pre {
+    line-height: 1;
+}
+
+.svgContainer {
     width: 100%;
     overflow: auto;
 }
-
-p {
-    line-height: 1.2;
-}
-
 
 .hand {
     font-family: 'Nanum Pen Script', cursive;
@@ -49,10 +53,6 @@ p {
 .blue {
     color: var(--hand-color);
     fill: var(--hand-color);
-}
-
-pre {
-    line-height: 1;
 }
 
 .center {
@@ -145,5 +145,7 @@ article h5 {
     width: 100%;
 }
 
-/* min-width	Rules applied for any browser width greater than the value defined in the query.*/
+.theorem{
 
+}
+/* min-width	Rules applied for any browser width greater than the value defined in the query.*/
