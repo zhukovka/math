@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+{% include head.html %}
+<body>
+<h1 class="center">{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</h1>
+<div class="flex flex-end">
+    <main>
+        {% include_relative _index.html %}
+    </main>
+    <aside>
+        <div class="fixed">
+            <div id="contents">
+
+            </div>
+        </div>
+    </aside>
+</div>
+{% include svg-symbols.html %}
+<script src="{{ "/assets/js/main.js" | relative_url }}"></script>
+</body>
+</html>

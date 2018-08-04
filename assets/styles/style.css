@@ -8,7 +8,6 @@
 
 html {
     font-family: Georgia, Serif;
-    /*font-size: var(--unit);*/
 }
 
 body {
@@ -19,13 +18,26 @@ h1, h2, h3, h4, h5 {
     font-family: 'Oxygen Mono', monospace;
 }
 
+main {
+    max-width: 100%;
+}
 article {
     font-size: 1.2rem;
+}
+
+svg {
+    overflow: visible;
+}
+
+.svgContainer{
+    width: 100%;
+    overflow: auto;
 }
 
 p {
     line-height: 1.2;
 }
+
 
 .hand {
     font-family: 'Nanum Pen Script', cursive;
@@ -130,4 +142,8 @@ article h5 {
     position: fixed;
     overflow: auto;
     height: 100%;
+    width: 100%;
 }
+
+/* min-width	Rules applied for any browser width greater than the value defined in the query.*/
+
