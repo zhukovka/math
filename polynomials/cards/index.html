@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cards</title>
+    <style>
+        .cards{
+            list-style: none;
+            padding: 0;
+            display: grid;
+            /*flexible-length unit fr*/
+            grid-template-columns: 1fr 1fr 1fr;
+
+            grid-gap: 20px;
+            grid-template-areas:
+                    "a a b"
+                    "c . d"
+                    "c e e";
+        }
+
+        .card1 {
+            grid-area: a;
+        }
+        .card2 {
+            grid-area: b;
+        }
+        .card3 {
+            grid-area: c;
+        }
+        .card4 {
+            grid-area: d;
+        }
+        .card5 {
+            grid-area: e;
+        }
+
+        li{
+            background: #0d82ff;
+        }
+    </style>
+</head>
+<body>
+<ul class="cards">
+    <li class="card1">
+        <h2>Card 1</h2>
+        <p>These cards have been laid out using grid layout. By setting <code>display: grid</code> on the parent, all direct children become grid items.</p>
+    </li>
+    <li class="card2">
+        <h2>Card 2</h2>
+        <p>These cards have been laid out using grid layout. By setting <code>display: grid</code> on the parent, all direct children become grid items.</p>
+    </li>
+
+    <li class="card3">
+        <h2>Card 3</h2>
+        <p>These cards have been laid out using grid layout. By setting <code>display: grid</code> on the parent, all direct children become grid items.</p>
+    </li>
+    <li class="card4">
+        <h2>Card 4</h2>
+        <p>These cards have been laid out using grid layout. By setting <code>display: grid</code> on the parent, all direct children become grid items.</p>
+    </li>
+    <li class="card5">
+        <h2>Card 5</h2>
+        <p>These cards have been laid out using grid layout. By setting <code>display: grid</code> on the parent, all direct children become grid items.</p>
+    </li>
+
+
+</ul>
+</body>
+</html>

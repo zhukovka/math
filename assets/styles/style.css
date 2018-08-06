@@ -1,8 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Nanum+Pen+Script|Oxygen+Mono');
+@import url('https://fonts.googleapis.com/css?family=Nanum+Pen+Script|Oxygen+Mono|Old+Standard+TT:400,400i');
 
 :root {
     --unit: 10px;
     --hand-color: #0d82ff;
+    --red: #ee6352;
+    --violet: #7a306c;
+    --orange: #fe5d26;
+    --green: #7dce82;
     --highlight: lemonchiffon;
 }
 
@@ -38,6 +42,10 @@ pre {
     line-height: 1;
 }
 
+.math {
+    font-family: 'Old Standard TT', serif;
+}
+
 .svgContainer {
     width: 100%;
     overflow: auto;
@@ -53,6 +61,16 @@ pre {
 .blue {
     color: var(--hand-color);
     fill: var(--hand-color);
+}
+
+.red {
+    color: var(--red);
+    fill: var(--red);
+}
+
+.orange {
+    color: var(--orange);
+    fill: var(--orange);
 }
 
 .center {
@@ -92,8 +110,24 @@ pre {
     display: flex;
 }
 
+.flex-1 {
+    flex: 1;
+}
+
+.flex-2 {
+    flex: 2;
+}
+
 .flex-end {
     justify-content: flex-end;
+}
+
+.space-evenly {
+    justify-content: space-evenly;
+}
+
+.align-center {
+    align-items: center;
 }
 
 .highlight {
@@ -127,25 +161,33 @@ article h5 {
 }
 
 @keyframes flash {
-    /*from {*/
-    /*background-color: transparent;*/
-    /*}*/
     50% {
         background-color: transparent;
     }
-    /*to {*/
-    /*background-color: transparent;*/
-    /*}*/
 }
 
 .fixed {
     position: fixed;
     overflow: auto;
     height: 100%;
-    width: 100%;
 }
 
-.theorem{
+.theorem {
 
 }
+
+.table-spaced {
+    border-collapse: separate;
+    border-spacing: 50px 0;
+}
+
+.table-spaced td {
+    padding-bottom: 25px;
+}
+
+.path-blue {
+    fill: none;
+    stroke: var(--hand-color);
+}
+
 /* min-width	Rules applied for any browser width greater than the value defined in the query.*/
