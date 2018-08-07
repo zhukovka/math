@@ -2,21 +2,15 @@
     <h3>Factor a Second-Degree Polynomial</h3>
     <p>
         The idea behind factoring a second-degree polynomial like <span
-            class="highlight"><i>x</i>² + B<i>x</i> + C</span> is to see whether it can be made equal to the product of
+            class="highlight math"><i>x</i>² + B<i>x</i> + C</span> is to see whether it can be made equal to the product of
         two, possibly equal, first-degree polynomials.
     </p>
     <p class="center">
         <svg>
             <!--x² + 􏰉7x + 􏰉12 = 􏰈(x + 􏰉3)(x + 􏰉4)-->
-            <text x="10" y="20">
-                <tspan font-style="italic">x</tspan>
-                ² + 7
-                <tspan font-style="italic">x</tspan>
-                + 12 = (
-                <tspan font-style="italic">x</tspan>
-                + 3)(
-                <tspan font-style="italic">x</tspan>
-                + 4)
+            <text x="10" y="20" class="math">
+                <tspan font-style="italic">x</tspan>² + 7<tspan font-style="italic">x</tspan> + 12
+                = (<tspan font-style="italic">x</tspan> + 3)(<tspan font-style="italic">x</tspan> + 4)
             </text>
             <!--C x1 y1, x2 y2, x y
             (x,y) are where you want the line to end
@@ -25,24 +19,24 @@
             <path d="M55,25 C 50 40, 50 70, 70 70" fill="none" stroke="var(--hand-color)"></path>
             <text x="75" y="80" class="hand">7 is the sum of 3 and 4</text>
             <!--             C x1 y1, x2 y2, x y-->
-            <path d="M100,25 C 95 40, 110 40, 120 40" class="path-blue"></path>
-            <text x="125" y="50" class="hand">12 is the product of 3 and 4</text>
+            <path d="M110,25 C 105 40, 120 40, 130 40" class="path-blue"></path>
+            <text x="135" y="50" class="hand">12 is the product of 3 and 4</text>
         </svg>
     </p>
     <p>
-        To factor a second-degree polynomial <i>x</i>² + B<i>x</i> + C, find integers whose product is C and whose sum
+        To factor a second-degree polynomial <span class="math"><i>x</i>² + B<i>x</i> + C</span>, find integers whose product is C and whose sum
         is B.
-        That is, if there are numbers <i>a</i>, <i>b</i>, where
-        <span class="highlight"><i>ab</i> = C</span> and <span class="highlight"><i>a</i> + <i>b</i> = B</span>,then
+        That is, if there are numbers <span class="math"><i>a</i>, <i>b</i></span>, where
+        <span class="highlight math"><i>ab</i> = C</span> and <span class="highlight"><i>a</i> + <i>b</i> = B</span>,then
     </p>
     <p class="center">
-        <span class="highlight"><i>x</i>² + B<i>x</i> + C = (<i>x</i> + <i>a</i>)(<i>x</i> + <i>b</i>)</span>
+        <span class="highlight math"><i>x</i>² + B<i>x</i> + C = (<i>x</i> + <i>a</i>)(<i>x</i> + <i>b</i>)</span>
     </p>
 
     <h4><b>Example 1</b></h4>
     <p><b>Factoring a Trinomial</b></p>
     <p>
-        Factor completely: <i>x</i>² + 7<i>x</i> + 10
+        Factor completely: <span class="math"><i>x</i>² + 7<i>x</i> + 10</span>
     </p>
     <p>
         First, determine all pairs of integers whose product is 10 and then compute their sums.
@@ -70,13 +64,13 @@
         </p>
     </div>
     <p class="hand">The integers 2 and 5 have a product of 10 and add up to 7.</p>
-    <p>
+    <p class="math">
         <i>x</i>² + 7<i>x</i> + 10 = (<i>x</i> + 5)(<i>x</i> + 2)
     </p>
 
     <h4><b>Example 2</b></h4>
     <p><b>Identifying a Prime Polynomial</b></p>
-    <p>Show that <i>x</i>² + 9 is prime.</p>
+    <p>Show that <span class="math"><i>x</i>² + 9</span> is prime.</p>
     <p>First, list the pairs of integers whose product is 9 and then compute their sums.</p>
     <div class="flex align-center">
         <p class="flex-1">
@@ -100,13 +94,75 @@
             <span class="flex-1 center">-6</span>
         </p>
     </div>
-    <p>Since the coefficient of the middle term in <i>x</i>² + 9 = <i>x</i>² + 0<i>x</i> + 9 is 0 and <span class="highlight">none of the sums equals 0</span>, we conclude that <i>x</i>² + 9 is prime.</p>
+    <p>Since the coefficient of the middle term in <span class="math"><i>x</i>² + 9 = <i>x</i>² + 0<i>x</i> + 9</span> is 0 and <span class="highlight">none of the sums equals 0</span>, we conclude that
+        <span class="math"><i>x</i>² + 9</span> is prime.</p>
 
     <div class="theorem">
         <p><b>THEOREM</b></p>
 
         <p>
-            Any polynomial of the form <i>x</i>² + <i>a</i>², <i>a</i> real, is prime.
+            Any polynomial of the form <span class="math"><i>x</i>² + <i>a</i>², <i>a</i></span> real, is prime.
         </p>
     </div>
+    <hr>
+    <p><b>Factor a Second-Degree Polynomial:</b> <math-expression class="highlight">Ax² + Bx + C, A ≠ 1</math-expression></p>
+    <ol class="double">
+        <li>Find the value of AC.</li>
+        <li>Find a pair of integers whose product is AC that add up to B.
+            That is, find
+            <math-expression>a</math-expression> and
+            <math-expression>b</math-expression> so that
+            <span class="highlight"><math-expression>ab = AC</math-expression> and
+                        <math-expression>a + b = B</math-expression></span>.
+        </li>
+        <li>
+            Write <math-expression>Ax² + Bx + C = Ax² + ax + bx + C</math-expression>
+        </li>
+    </ol>
+
+    <h4>Example 3</h4>
+    <p>Factor completely:
+        <math-expression>2x² + 5x + 3</math-expression></p>
+    <p>Comparing <math-expression>2x² + 5x + 3</math-expression> to <math-expression>Ax² + Bx + C</math-expression>, we find that
+        <math-expression>A = 2, B = 5</math-expression>, and
+        <math-expression>C = 3</math-expression>.</p>
+    <ol class="double">
+        <li>The value of
+            <math-expression>AC is 2 ⋅ 3 = 6</math-expression></li>
+        <li>
+            Determine the pairs of integers whose product is
+            <math-expression>AC = 6</math-expression> and compute
+            their sums.
+            <div class="flex align-center">
+                <p class="flex-1">
+                    <b>Integers whose product is 6:</b>
+                </p>
+                <p class="flex flex-2 space-evenly align-center">
+                    <span class="flex-1 center highlight">2, 3</span>
+                    <span class="flex-1 center">-2, -3</span>
+                    <span class="flex-1 center">6, 1</span>
+                    <span class="flex-1 center">-6, -1</span>
+                </p>
+            </div>
+            <div class="flex align-center">
+                <p class="flex-1">
+                    <b>Sum:</b>
+                </p>
+                <p class="flex flex-2 space-evenly align-center">
+                    <span class="flex-1 center highlight">5</span>
+                    <span class="flex-1 center">-5</span>
+                    <span class="flex-1 center">7</span>
+                    <span class="flex-1 center">-7</span>
+                </p>
+            </div>
+        </li>
+        <li>
+            The integers whose product is 6 that add up to
+            <math-expression>B = 5</math-expression> are 2 and 3.
+            <p><math-expression>2x² + <span class="orange">5x</span> + 3 = 2x² + <span class="orange">2x + 3x</span> + 3</math-expression></p>
+        </li>
+        <li>
+            Factor by grouping:
+        </li>
+    </ol>
 </article>
