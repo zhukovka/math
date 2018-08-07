@@ -3,20 +3,13 @@
         <p class="center">
             <svg height="60">
                 <!--(2x+3)(x-4) = 2x - 5x - 12-->
-                <text x="10" y="20">
-                    (2
-                    <tspan font-style="italic">x</tspan>
-                    +3)(
-                    <tspan font-style="italic">x</tspan>
-                    -4) = 2
-                    <tspan font-style="italic">x</tspan>
-                    - 5
-                    <tspan font-style="italic">x</tspan>
-                    - 12
+                <text x="10" y="20" class="math">
+                    (2<tspan font-style="italic">x</tspan> +3)(<tspan font-style="italic">x</tspan> - 4)
+                    = 2<tspan font-style="italic">x</tspan> - 5<tspan font-style="italic">x</tspan> - 12
                 </text>
-                <path d="M12,25 V30 H56 V25" stroke="var(--hand-color)" fill="none"></path>
-                <path d="M62,25 V30 H90 V25" stroke="var(--hand-color)" fill="none"></path>
-                <text x="20" y="50" class="hand">factors</text>
+                <path d="M15,25 V30 H75 V25" stroke="var(--hand-color)" fill="none"></path>
+                <path d="M85,25 V30 H130 V25" stroke="var(--hand-color)" fill="none"></path>
+                <text x="50" y="50" class="hand">factors</text>
             </svg>
         </p>
         <p>
@@ -42,8 +35,7 @@
         <p class="center">
             <svg height="80">
                 <!--2x + 4 = 2(x + 2)-->
-                <text x="10" y="20">2
-                    <tspan font-style="italic">x</tspan>
+                <text x="10" y="20" class="math">2<tspan font-style="italic">x</tspan>
                     + 4 = 2(<tspan font-style="italic">x</tspan> + 2)
                 </text>
                 <!--C x1 y1, x2 y2, x y
@@ -52,9 +44,9 @@
                 (x2,y2) is the control point for the end-->
                 <path d="M15,25 C 15 40, 20 50, 30 50" fill="none" stroke="var(--hand-color)"
                       marker-start="url(#arrow)"></path>
-                <text x="40" y="40" class="hand">2⋅2</text>
+                <text x="55" y="40" class="hand">2⋅2</text>
                 <text x="40" y="60" class="hand">2 is common monomial factor</text>
-                <text x="160" y="20" class="hand">⟵ factored form</text>
+                <text x="180" y="20" class="hand">⟵ factored form</text>
 
             </svg>
         </p>
@@ -67,28 +59,28 @@
         <table class="table-spaced">
             <tr>
                 <td><b>Difference of Two Squares</b></td>
-                <td><i>x</i>² - a² = (<i>x</i> - a)(<i>x</i> + a)</td>
+                <td class="math"><i>x</i>² - a² = (<i>x</i> - a)(<i>x</i> + a)</td>
             </tr>
             <tr>
                 <td><b>Perfect Squares</b></td>
-                <td><!--x² - 2ax + a² = (x - a)²-->
+                <td class="math"><!--x² - 2ax + a² = (x - a)²-->
                     <i>x</i>² - 2a<i>x</i> + a² = (<i>x</i> - a)²
                 </td>
             </tr>
             <tr>
                 <td><b>Sum of two cubes</b></td>
-                <td><!--x³ + a³ = (x + a)(x² - ax + a²)-->
+                <td class="math"><!--x³ + a³ = (x + a)(x² - ax + a²)-->
                     <i>x</i>³ + a³ = (<i>x</i> + a)(<i>x</i>² - a<i>x</i> + a²)
                 </td>
             </tr>
             <tr>
                 <td><b>Difference of two cubes</b></td>
-                <td><!--x³ - a³ = (x - a)(x² + ax + a²)-->
+                <td class="math"><!--x³ - a³ = (x - a)(x² + ax + a²)-->
                     <i>x</i>³ - a³ = (<i>x</i> - a)(<i>x</i>² + a<i>x</i> + a²)
                 </td>
             </tr>
         </table>
     </article>
-    {% include_relative degree2.html %}
     {% include_relative grouping.html %}
+    {% include_relative degree2.html %}
 </section>
