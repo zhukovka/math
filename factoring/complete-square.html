@@ -1,0 +1,95 @@
+<article>
+    <h3>Complete the Square</h3>
+    <p>
+        The idea behind completing the square in one variable is to <span
+            class="highlight">“adjust” an expression of the form
+        <math-expression>x² + bx</math-expression> to make it a perfect square</span>. Perfect squares are trinomials of
+        the form
+    </p>
+    <p>
+        <math-expression>x² + 2ax + a² = (x + a)²</math-expression>
+        <br>
+        or
+        <br>
+        <math-expression>x² - 2ax + a² = (x - a)²</math-expression>
+    </p>
+    <p>
+        We do it by adding a number.
+        For example, to make
+        <math-expression>x + 6x</math-expression>
+        a perfect square, add 9.
+        But how do we know to add 9?
+        If we divide the coefficient on the first-degree term, 6, by 2, and then square the result, we obtain 9.
+        This approach works in general.
+    </p>
+    <div class="header-blue">
+        <p>
+            <b>
+                Completing the Square
+            </b>
+        </p>
+        <p>
+            Identify the coefficient of the first-degree term.
+            Multiply this coefficient by ½ and then square the result.
+        </p>
+        <p>
+            <span style="position: relative; top: -20px">That is, determine the value of <i class="math">b</i> in <math-expression>x² + bx</math-expression> and compute</span>
+            <svg width="60" height="50">
+                <text>
+                    <tspan x="0" y="20">⎛</tspan>
+                    <tspan x="0" y="39">⎝</tspan>
+                </text>
+                <text class="math">
+                    <tspan x="12" y="20">1</tspan>
+                    <tspan x="12" y="21">_</tspan>
+                    <tspan x="12" y="40">2</tspan>
+                </text>
+                <text x="27" y="30" class="math" font-style="italic">b</text>
+                <text>
+                    <tspan x="37" y="20">⎞</tspan>
+                    <tspan x="37" y="39">⎠</tspan>
+                </text>
+                <text x="42" y="15" class="math">²</text>
+            </svg>
+        </p>
+    </div>
+    <hr>
+    <h4>Example 1</h4>
+    <p>
+        Determine the number that must be added to each expression to complete the square. Then factor the expression.
+    </p>
+    <ol>
+        <li>
+            <ul>
+                <li>
+                    <math-expression>y² + 8y</math-expression>
+                </li>
+                <li>
+                    <math-expression>(½ ⋅ 8)² = 16</math-expression>
+                </li>
+                <li>
+                    <math-expression>y² + 8y + 16</math-expression>
+                </li>
+                <li>
+                    <math-expression>(y + 4)²</math-expression>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <ul>
+                <li>
+                    <math-expression>p² - 5p</math-expression>
+                </li>
+                <li>
+                    <math-expression>(½ ⋅ 5)² = 25/4</math-expression>
+                </li>
+                <li>
+                    <math-expression>p² - 5p + 25/4</math-expression>
+                </li>
+                <li>
+                    <math-expression>(p + 5/2)²</math-expression>
+                </li>
+            </ul>
+        </li>
+    </ol>
+</article>

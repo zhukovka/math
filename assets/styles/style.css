@@ -63,6 +63,10 @@ pre {
     fill: var(--hand-color);
 }
 
+.header-blue{
+    background-color: aliceblue;
+}
+
 .red {
     color: var(--red);
     fill: var(--red);
@@ -98,6 +102,9 @@ pre {
     line-height: 2;
 }
 
+.caps {
+    text-transform: uppercase;
+}
 .lower-alpha {
     list-style-type: lower-alpha;
 }
@@ -106,8 +113,16 @@ pre {
     list-style-type: upper-alpha;
 }
 
+.border-bottom{
+    border-bottom: 1px solid;
+}
+
 .flex {
     display: flex;
+}
+
+.inline-flex{
+    display: inline-flex;
 }
 
 .flex-1 {
@@ -188,6 +203,29 @@ article h5 {
 .path-blue {
     fill: none;
     stroke: var(--hand-color);
+}
+
+.grid-1-2-2 {
+    list-style: none;
+    margin: 10px 0 0 0;
+    padding: 0;
+    display: grid;
+    /*flexible-length unit fr*/
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-gap: 10px;
+}
+
+math-expression{
+    display: inline-flex;
+    align-items: center;
+}
+math-fraction{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+math-fraction > sup{
+    border-bottom: 1px solid;
 }
 
 /* min-width	Rules applied for any browser width greater than the value defined in the query.*/

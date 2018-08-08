@@ -1,4 +1,5 @@
 import {fillContents} from './js/contents';
-import * as math from './js/components/math-expression';
+import './js/components/math-expression';
+import './js/components/math-fraction';
 //build contents
 fillContents();
