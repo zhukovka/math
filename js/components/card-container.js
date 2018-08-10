@@ -109,7 +109,7 @@ class CardContainer extends HTMLElement {
 
     _getCards () {
         const slot = this.shadowRoot.querySelector('slot');
-        return slot && slot.assignedElements();
+        return slot && slot.assignedNodes().filter(n => n instanceof HTMLElement);
     }
 
     _onKeyDown (keyCode, i, N, container) {
