@@ -16,6 +16,8 @@ style.innerHTML = `
     .card__shadow {
         transition: transform 1s;
         z-index: 0;
+        /*Safari workaround*/
+        transform: translateZ(-1000px);
     }
     
     .card__face {
@@ -23,6 +25,7 @@ style.innerHTML = `
         height: 100%;
         width: 100%;
         backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
         background: var(--card-face);
         color: var(--card-text);
         box-sizing: border-box;
