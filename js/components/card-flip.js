@@ -10,13 +10,16 @@ template.innerHTML = `
         contain: content;
         --background:#78C7DE;
         --card-face: #A4DBEA;
-        --card-shadow: #83cde2;
+        --card-text: #293132;
+        --container-width: 100vw;
+        --container-height: 100vh;
         --card-width: 250px;
         --card-height: 460px;
+        --card-shadow: 20px 20px 20px rgba(0, 0, 0, 0.1), -20px 20px 20px rgba(0, 0, 0, 0.1);
       }
     .container {
-        width: 100vw;
-        height: 100vh;
+        width: var(--container-width);
+        height: var(--container-height);
 
         display: flex;
         align-items: center;
@@ -40,7 +43,7 @@ template.innerHTML = `
         /*The perspective CSS property determines the
         distance between the z=0 plane and the user
         in order to give a 3D-positioned element some perspective.*/
-        perspective: 200vw;
+        perspective: calc(var(--card-width) * 4);
         z-index: 1;
     }
 
@@ -51,11 +54,11 @@ template.innerHTML = `
         transition: transform 1s;
         /*Indicates that the children of the element should be positioned in the 3D-space.*/
         transform-style: preserve-3d;
-        box-shadow: 1px 1px 0 var(--card-shadow);
+        box-shadow: 1px 1px 0 #83cde2;
     }
 
     .card__shadow {
-        box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.1), -20px 20px 20px rgba(0, 0, 0, 0.1);
+        box-shadow: var(--card-shadow);
         position: absolute;
         height: 90%;
         width: 90%;
@@ -70,12 +73,9 @@ template.innerHTML = `
         width: 100%;
         backface-visibility: hidden;
         background: var(--card-face);
-        color: #293132;
+        color: var(--card-text);
         box-sizing: border-box;
         padding: 20px;
-    }
-
-    .card__face--front {
     }
 
     .card__face--back {
@@ -88,9 +88,6 @@ template.innerHTML = `
 
     .card.is-flipped ~ .card__shadow {
         transform: rotateY(180deg);
-    }
-    @keyframes collapse {
-        50% { transform: scaleX(0); }
     }
     </style>
     <div class="container">
