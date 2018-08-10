@@ -1,4 +1,4 @@
-class MathFracrion extends HTMLElement {
+class MathFraction extends HTMLElement {
     constructor () {
         super(); // always call super() first in the constructor.
     }
@@ -10,4 +10,4 @@ class MathFracrion extends HTMLElement {
     }
 }
 
-customElements.define('math-fraction', MathFracrion);
+customElements.define('math-fraction', MathFraction);

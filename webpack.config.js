@@ -5,7 +5,8 @@ module.exports = {
     mode: 'development',
     entry: {
         main: './index.js',
-        flash: './js/flash.js'
+        flash: './js/flash.js',
+        cards: './js/cards.js'
     },
     output: {
         filename: '[name].js',
