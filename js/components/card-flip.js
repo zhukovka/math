@@ -1,17 +1,18 @@
-const KEYCODE = {
-    DOWN: 40,
-    LEFT: 37,
-    RIGHT: 39,
-    UP: 38,
-    HOME: 36,
-    END: 35,
-};
 const template = document.createElement('template');
 template.innerHTML = `
     <style>
       :host {
         display: flex;
         flex-wrap: wrap;
+        /*The contain CSS property allows an author 
+        to indicate that an element and its contents are, 
+        as much as possible, independent of the rest of the document tree.*/
+        contain: content;
+        --background:#78C7DE;
+        --card-face: #A4DBEA;
+        --card-shadow: #83cde2;
+        --card-width: 250px;
+        --card-height: 460px;
       }
     .container {
         width: 100vw;
@@ -20,12 +21,12 @@ template.innerHTML = `
         display: flex;
         align-items: center;
         justify-content: center;
-        background: #78C7DE;
+        background: var(--background);
     }
 
     .scene {
-        width: 250px;
-        height: 460px;
+        width: var(--card-width);
+        height: var(--card-height);
         position: relative;
         display: flex;
         align-items: center;
@@ -50,7 +51,7 @@ template.innerHTML = `
         transition: transform 1s;
         /*Indicates that the children of the element should be positioned in the 3D-space.*/
         transform-style: preserve-3d;
-        box-shadow: 1px 1px 0 #83cde2;
+        box-shadow: 1px 1px 0 var(--card-shadow);
     }
 
     .card__shadow {
@@ -68,7 +69,7 @@ template.innerHTML = `
         height: 100%;
         width: 100%;
         backface-visibility: hidden;
-        background: #A4DBEA;
+        background: var(--card-face);
         color: #293132;
         box-sizing: border-box;
         padding: 20px;
@@ -113,7 +114,6 @@ class CardFlip extends HTMLElement {
     constructor () {
         super();
         this._onSlotChange = this._onSlotChange.bind(this);
-        this._onClick = this._onClick.bind(this);
         this.attachShadow({mode: 'open'});
         this.shadowRoot.appendChild(template.content.cloneNode(true));
 
@@ -129,16 +129,12 @@ class CardFlip extends HTMLElement {
     };
 
     connectedCallback () {
-        this.addEventListener('keydown', this._onKeyDown);
-        this.addEventListener('click', this._onClick);
-
+        this.addEventListener('click', () => {
+            this.onClick();
+        });
     }
 
-    _onKeyDown (event) {
-
-    }
-
-    _onClick (event) {
+    onClick () {
         this.card.classList.toggle("is-flipped");
     }
 
