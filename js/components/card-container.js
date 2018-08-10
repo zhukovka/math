@@ -14,6 +14,22 @@ template.innerHTML = `
         display: block;
         width: 100vw;
         overflow: hidden;
+        --indicator-size: 2vw;
+        --indicator-color: rgba(255,255,255,0.3);
+        --active-indicator: white;
+    }
+    /* Desktops and laptops ----------- */
+    @media only screen  and (min-width : 768px) {
+        /* Styles */
+        :host {
+           --indicator-size: 1vw;
+        }
+    }
+    @media only screen  and (min-width : 1400px) {
+        /* Styles */
+        :host {
+           --indicator-size: 0.5vw;
+        }
     }
     .container {
         --n: 1;
@@ -25,7 +41,29 @@ template.innerHTML = `
         transform: translate(calc(var(--i) / var(--n) * -100%));
         transition: transform .5s ease-out;
     }
-
+    .indicators{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        z-index: 999;
+        list-style: none;
+    }
+    
+    .indicator{
+        width: var(--indicator-size);
+        height: var(--indicator-size);
+        background: var(--indicator-color);
+        border-radius: 50%;
+        margin: 5px;
+    }
+    
+    
     .controls {
         position: fixed;
         top: 0;
@@ -63,6 +101,9 @@ template.innerHTML = `
         right: 30%;
     }
 </style>
+<ul class="indicators">
+    
+</ul>
 <div class="container">
     <slot></slot>
 </div>
@@ -81,6 +122,25 @@ class CardContainer extends HTMLElement {
 
     }
 
+    set currentCard (i) {
+        if (i === this._currentCard) {
+            return
+        }
+        const container = this.shadowRoot.querySelector('.container'),
+            indicators = this.shadowRoot.querySelectorAll('.indicator');
+
+        indicators[i].style.setProperty('--indicator-color', 'var(--active-indicator)');
+
+        let indicator = indicators[this._currentCard];
+        if (indicator) {
+            indicator.style.removeProperty('--indicator-color');
+        }
+
+
+        container.style.setProperty('--i', i);
+        this._currentCard = i;
+    }
+
 
     connectedCallback () {
         if (!this.hasAttribute('tabindex'))
@@ -88,6 +148,7 @@ class CardContainer extends HTMLElement {
 
 
         const container = this.shadowRoot.querySelector('.container'),
+            indicators = this.shadowRoot.querySelector('.indicators'),
             next = this.shadowRoot.querySelector('#next'),
             prev = this.shadowRoot.querySelector('#prev'),
             cards = this._getCards(),
@@ -95,15 +156,19 @@ class CardContainer extends HTMLElement {
 
         container.style.setProperty('--n', N);
 
-        let i = 0;
-        next.addEventListener("click", e => {
-            i = this._onKeyDown(KEYCODE.RIGHT, i, N, container);
+        indicators.innerHTML = [...(new Array(N))].map(n => {
+            return `<li class="indicator"></li>`;
+        }).join('');
+
+        this.currentCard = 0;
+        next.addEventListener('click', e => {
+            this.currentCard = this._onKeyDown(KEYCODE.RIGHT, N);
         });
-        prev.addEventListener("click", e => {
-            i = this._onKeyDown(KEYCODE.LEFT, i, N, container);
+        prev.addEventListener('click', e => {
+            this.currentCard = this._onKeyDown(KEYCODE.LEFT, N);
         });
         this.addEventListener('keydown', e => {
-            i = this._onKeyDown(e.keyCode, i, N, container);
+            this.currentCard = this._onKeyDown(e.keyCode, N);
         });
     }
 
@@ -112,8 +177,8 @@ class CardContainer extends HTMLElement {
         return slot && slot.assignedNodes().filter(n => n instanceof HTMLElement);
     }
 
-    _onKeyDown (keyCode, i, N, container) {
-        let _i = i;
+    _onKeyDown (keyCode, N) {
+        let _i = this._currentCard;
         switch (keyCode) {
             case KEYCODE.LEFT:
                 _i = (N + --_i) % N;
@@ -123,15 +188,13 @@ class CardContainer extends HTMLElement {
                 break;
             case KEYCODE.SPACE:
                 const cards = this._getCards();
-                cards[i].onClick();
+                cards[_i].onClick();
                 break;
         }
 
-        if (i !== _i) {
-            container.style.setProperty('--i', _i);
-        }
         return _i;
     }
+
 }
 
 customElements.define('card-container', CardContainer);
