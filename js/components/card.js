@@ -13,10 +13,31 @@ template.innerHTML = `
         --card-text: #293132;
         --container-width: 100vw;
         --container-height: 100vh;
-        --card-width: 250px;
-        --card-height: 460px;
-        --card-shadow: 20px 20px 20px rgba(0, 0, 0, 0.1), -20px 20px 20px rgba(0, 0, 0, 0.1);
+        --card-width: 80vw;
+        --card-height: 80vh;
+        --shadow-x: calc(var(--card-width) * 0.075);
+        --card-shadow:  var(--shadow-x) var(--shadow-x) 20px rgba(0, 0, 0, 0.1), calc( -1 * var(--shadow-x)) var(--shadow-x) 20px rgba(0, 0, 0, 0.1);
       }
+      
+      /* Desktops and laptops ----------- */
+    @media only screen  and (min-width : 768px) {
+        /* Styles */
+        :host {
+           --card-width: 50vw;
+           --card-height: 50vh;
+           --shadow-x: calc(var(--card-width) * 0.075);
+           --card-shadow:  var(--shadow-x) var(--shadow-x) 20px rgba(0, 0, 0, 0.1), calc( -1 * var(--shadow-x)) var(--shadow-x) 20px rgba(0, 0, 0, 0.1);
+        }
+    }
+    @media only screen  and (min-width : 1200px) {
+        /* Styles */
+        :host {
+           --card-width: 40vw;
+           --card-height: 40vh;
+           --shadow-x: calc(var(--card-width) * 0.075);
+           --card-shadow:  var(--shadow-x) var(--shadow-x) 20px rgba(0, 0, 0, 0.1), calc( -1 * var(--shadow-x)) var(--shadow-x) 20px rgba(0, 0, 0, 0.1);
+        }
+    }
     .container {
         width: var(--container-width);
         height: var(--container-height);
@@ -58,7 +79,7 @@ template.innerHTML = `
         background: rgba(0, 0, 0, 0.2);
         z-index: 0;
     }
-
+    
     </style>
     <div class="container">
         <div class="scene">
