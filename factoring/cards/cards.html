@@ -1,10 +1,111 @@
 <card-container>
     <card-flip>
-        <div slot="front">Front1</div>
-        <div slot="back">Back1</div>
+        <div slot="front" class="flex-center">
+            <h3>Prime polynomial</h3>
+        </div>
+        <div slot="back" class="flex-center">
+            <p>
+                If a polynomial cannot be written as the product of two other polynomials (excluding 1 and -1), then the
+                polynomial is said to be prime.
+            </p>
+        </div>
     </card-flip>
+    <!--CARD-->
     <card-flip>
-        <div slot="front">Front2</div>
-        <div slot="back">Back2</div>
+        <div slot="front" class="flex-center">
+            <h3>
+                Perfect Squares
+            </h3>
+        </div>
+        <div slot="back" class="flex-center">
+            <p>
+                <math-expression style="font-size: 1.25rem">(x - a)² = x² - 2ax + a²</math-expression>
+            </p>
+        </div>
+    </card-flip>
+    <!--CARD-->
+    <card-flip>
+        <div slot="front" class="flex-center">
+            <h3>
+                Difference of Two Squares
+            </h3>
+        </div>
+        <div slot="back" class="flex-center">
+            <p>
+                <math-expression style="font-size: 1.25rem">x² - a² = (x - a)(x + a)</math-expression>
+            </p>
+        </div>
+    </card-flip>
+    <!--CARD-->
+    <card-flip>
+        <div slot="front" class="flex-center">
+            <h3>
+                Difference of two cubes
+            </h3>
+        </div>
+        <div slot="back" class="flex-center">
+            <p>
+                <math-expression style="font-size: 1.25rem">x³ - a³ = (x - a)(x² + ax + a²)</math-expression>
+            </p>
+        </div>
+    </card-flip>
+    <!--CARD-->
+    <card-flip>
+        <div slot="front" class="flex-center">
+            <h3>
+                Factor a Second-Degree Polynomial:
+                <math-expression>x² + Bx + C</math-expression>
+            </h3>
+        </div>
+        <div slot="back" class="flex-center">
+            <p>
+                <math-expression style="font-size: 1.25rem">x² + Bx + C = (x + a)(x + b)</math-expression>
+            </p>
+        </div>
+    </card-flip>
+    <!--CARD-->
+    <card-flip>
+        <div slot="front" class="flex-center">
+            <h3 class="center">
+                Factor a Second-Degree Polynomial: <math-expression>Ax² + Bx + C, A ≠ 1</math-expression>
+            </h3>
+        </div>
+        <div slot="back" class="flex-center">
+            <p style="font-size: 1.25rem">
+                <math-expression>Ax² + Bx + C</math-expression>
+                <br>
+                <math-expression>= Ax² + ax + bx + C</math-expression>
+            </p>
+        </div>
+    </card-flip>
+    <!--CARD-->
+    <card-flip>
+        <div slot="front" class="flex-center">
+            <h3 class="center">
+                Complete the Square
+            </h3>
+        </div>
+        <div slot="back" class="flex-center">
+            <p style="font-size: 1.25rem">
+                <span style="position: relative; top: -20px">That is, determine the value of <i class="math">b</i> in <math-expression>x² + bx</math-expression> and compute</span>
+                <svg width="60" height="50">
+                    <text>
+                        <tspan x="0" y="20">⎛</tspan>
+                        <tspan x="0" y="39">⎝</tspan>
+                    </text>
+                    <text class="math">
+                        <tspan x="12" y="20">1</tspan>
+                        <tspan x="12" y="21">_</tspan>
+                        <tspan x="12" y="40">2</tspan>
+                    </text>
+                    <text x="27" y="30" class="math" font-style="italic">b</text>
+                    <text>
+                        <tspan x="37" y="20">⎞</tspan>
+                        <tspan x="37" y="39">⎠</tspan>
+                    </text>
+                    <text x="42" y="15" class="math">²</text>
+                </svg>
+            </p>
+        </div>
     </card-flip>
 </card-container>

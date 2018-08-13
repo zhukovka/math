@@ -8,7 +8,7 @@ class MathExpression extends HTMLElement {
         let html = "";
         for (const node of this.childNodes) {
             let textContent = node.textContent;
-            let content = textContent.replace(/[a-z]/g, "<i>$&</i>").replace(/\s/g, "&nbsp;");
+            let content = textContent.replace(/[a-z]/g, "<i>$&</i>").replace(/\s+/g, "&nbsp;");
             if(textContent.includes("/")){
                 content = content.replace(/(\d*\/\d)/g, "<math-fraction>$&</math-fraction>")
             }

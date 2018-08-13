@@ -1,3 +1,5 @@
+import {shuffle} from '../utils';
+
 const KEYCODE = {
     DOWN: 40,
     LEFT: 37,
@@ -100,6 +102,14 @@ template.innerHTML = `
         transform: rotate(-135deg);
         right: 30%;
     }
+    
+    label[for="shuffle"]{
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
 </style>
 <ul class="indicators">
     
@@ -111,6 +121,11 @@ template.innerHTML = `
 </div>
 <div id="next" class="controls">
 </div>
+
+<label for="shuffle">
+    <input type="checkbox"  id="shuffle">
+    Shuffle
+</label>
 `;
 
 class CardContainer extends HTMLElement {
@@ -119,7 +134,7 @@ class CardContainer extends HTMLElement {
         this._onKeyDown = this._onKeyDown.bind(this);
         this.attachShadow({mode: 'open'});
         this.shadowRoot.appendChild(template.content.cloneNode(true));
-
+        this.shuffle = false;
     }
 
     set currentCard (i) {
@@ -151,6 +166,7 @@ class CardContainer extends HTMLElement {
             indicators = this.shadowRoot.querySelector('.indicators'),
             next = this.shadowRoot.querySelector('#next'),
             prev = this.shadowRoot.querySelector('#prev'),
+            shuffleBtn = this.shadowRoot.querySelector('#shuffle'),
             cards = this._getCards(),
             N = cards && cards.length;
 
@@ -170,6 +186,9 @@ class CardContainer extends HTMLElement {
         this.addEventListener('keydown', e => {
             this.currentCard = this._onKeyDown(e.keyCode, N);
         });
+        shuffleBtn.addEventListener('change', e => {
+            this.shuffle = !this.shuffle;
+        });
     }
 
     _getCards () {
@@ -178,21 +197,21 @@ class CardContainer extends HTMLElement {
     }
 
     _onKeyDown (keyCode, N) {
-        let _i = this._currentCard;
+        let i = this._currentCard;
         switch (keyCode) {
             case KEYCODE.LEFT:
-                _i = (N + --_i) % N;
+                i = this.shuffle ? (Math.random() * N) | 0 : (N + --i) % N;
                 break;
             case KEYCODE.RIGHT:
-                _i = ++_i % N;
+                i = this.shuffle ? (Math.random() * N) | 0 : (++i) % N ;
                 break;
             case KEYCODE.SPACE:
                 const cards = this._getCards();
-                cards[_i].onClick();
+                cards[i].onClick();
                 break;
         }
 
-        return _i;
+        return i;
     }
 
 }

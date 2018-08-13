@@ -121,6 +121,12 @@ pre {
     display: flex;
 }
 
+.flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .inline-flex{
     display: inline-flex;
 }
@@ -218,6 +224,7 @@ article h5 {
 math-expression{
     display: inline-flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 math-fraction{
     display: inline-flex;

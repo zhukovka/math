@@ -42,6 +42,10 @@ style.innerHTML = `
     .card.is-flipped ~ .card__shadow {
         transform: rotateY(180deg);
     }
+    ::slotted(*) {
+      height: 100%;
+      width: 100%;
+    }
     </style>    
   `;
 
