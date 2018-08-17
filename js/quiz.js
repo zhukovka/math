@@ -36,7 +36,7 @@ async function loadAnswers () {
             card.addEventListener("click", e => {
                 if (e.target.classList.contains("check")) {
                     let {key, value} = card.answer;
-                    card.correct = answers[key].toLowerCase() === value.toLowerCase();
+                    card.correct = !!value && !!answers[key] && answers[key].toLowerCase() === value.toLowerCase();
                     console.log(answers[key], value)
                 }
             });

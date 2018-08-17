@@ -16,6 +16,11 @@ class CardQuiz extends CardElement {
     constructor () {
         super();
         this.shadowRoot.appendChild(style.content.cloneNode(true));
+        const checkButton = document.createElement("button");
+        checkButton.className = "check";
+        checkButton.textContent = "Check";
+        //<button class="check">Check</button>
+        this.appendChild(checkButton);
     }
 
     connectedCallback () {
