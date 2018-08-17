@@ -1,6 +1,6 @@
-const template = document.createElement('template');
-template.innerHTML = `
-    <style>
+const style = document.createElement('template');
+style.innerHTML = `
+<style>
       :host {
         display: flex;
         flex-wrap: wrap;
@@ -8,9 +8,11 @@ template.innerHTML = `
         to indicate that an element and its contents are, 
         as much as possible, independent of the rest of the document tree.*/
         contain: content;
+        
         --background:#78C7DE;
         --card-face: #A4DBEA;
         --card-text: #293132;
+        
         --container-width: 100vw;
         --container-height: 100vh;
         --card-width: 80vw;
@@ -19,7 +21,7 @@ template.innerHTML = `
         --card-shadow:  var(--shadow-x) var(--shadow-x) 20px rgba(0, 0, 0, 0.1), calc( -1 * var(--shadow-x)) var(--shadow-x) 20px rgba(0, 0, 0, 0.1);
       }
       
-      /* Desktops and laptops ----------- */
+    /* Desktops and laptops ----------- */
     @media only screen  and (min-width : 768px) {
         /* Styles */
         :host {
@@ -37,6 +39,11 @@ template.innerHTML = `
            --shadow-x: calc(var(--card-width) * 0.075);
            --card-shadow:  var(--shadow-x) var(--shadow-x) 20px rgba(0, 0, 0, 0.1), calc( -1 * var(--shadow-x)) var(--shadow-x) 20px rgba(0, 0, 0, 0.1);
         }
+    }
+    
+    :host(.green) {
+        --background: #488e5e;
+        --card-face: #66b27e;
     }
     .container {
         width: var(--container-width);
@@ -68,7 +75,7 @@ template.innerHTML = `
         width: 100%;
         height: 100%;
         position: relative;
-        box-shadow: 1px 1px 0 #83cde2;
+        /*box-shadow: 1px 1px 0 #83cde2;*/
     }
 
     .card__shadow {
@@ -80,12 +87,27 @@ template.innerHTML = `
         z-index: 0;
     }
     
+    .card__face {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: var(--card-face);
+        color: var(--card-text);
+        box-sizing: border-box;
+        padding: 20px;
+    }
+    
     </style>
+`;
+const template = document.createElement('template');
+template.innerHTML = `
     <div class="container">
         <div class="scene">
             <div class="card">
                 <div class="card__container">
-                    <slot></slot>
+                    <div class="card__face">
+                        <slot></slot>
+                    </div>
                 </div>
             </div>
             <div class="card__shadow"></div>
@@ -97,6 +119,7 @@ class CardElement extends HTMLElement {
     constructor () {
         super();
         this.attachShadow({mode: 'open'});
+        this.shadowRoot.appendChild(style.content.cloneNode(true));
         this.shadowRoot.appendChild(template.content.cloneNode(true));
         this._cardContainer = this.shadowRoot.querySelector(".card__container");
         this.card = this.shadowRoot.querySelector(".card");

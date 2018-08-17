@@ -108,8 +108,7 @@ template.innerHTML = `
         bottom: 20px;
         left: 50%;
         transform: translateX(-50%);
-    }
-    
+    }    
 </style>
 <ul class="indicators">
     
@@ -156,6 +155,10 @@ class CardContainer extends HTMLElement {
         this._currentCard = i;
     }
 
+    get card(){
+        const cards = this._getCards();
+        return cards[this._currentCard];
+    }
 
     connectedCallback () {
         if (!this.hasAttribute('tabindex'))

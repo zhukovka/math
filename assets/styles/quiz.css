@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+card-container{
+    font-family: 'Montserrat', sans-serif;
+}
+
+card-quiz{
+    display: flex;
+}
+
+math-expression{
+    font-size: 1.5rem;
+}
+
+button.check{
+    background: #d1ad5d;
+    color: #275345;
+    font-weight: 700;
+    -webkit-appearance: none;
+    border: none;
+    font-size: 1rem;
+    padding: 1rem;
+    width: 70%;
+    align-self: center;
+}

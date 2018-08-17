@@ -21,15 +21,8 @@ style.innerHTML = `
     }
     
     .card__face {
-        position: absolute;
-        height: 100%;
-        width: 100%;
         backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
-        background: var(--card-face);
-        color: var(--card-text);
-        box-sizing: border-box;
-        padding: 20px;
     }
     .card__face--back {
         transform: rotateY(180deg);
@@ -62,8 +55,10 @@ template.innerHTML = `
 class CardFlip extends CardElement {
     constructor () {
         super();
+
         this.shadowRoot.appendChild(style.content.cloneNode(true));
-        this._cardContainer.appendChild(template.content.cloneNode(true))
+        //parentNode.replaceChild(newChild, oldChild);
+        this._cardContainer.replaceChild(template.content.cloneNode(true), this._cardContainer.firstElementChild)
     }
 
     onClick () {

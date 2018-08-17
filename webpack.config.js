@@ -6,7 +6,19 @@ module.exports = {
     entry: {
         main: './index.js',
         flash: './js/flash.js',
-        cards: './js/cards.js'
+        cards: './js/cards.js',
+        quiz: './js/quiz.js'
+    },
+    module: {
+        rules: [
+            {
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    'css-loader'
+                ]
+            }
+        ]
     },
     output: {
         filename: '[name].js',
