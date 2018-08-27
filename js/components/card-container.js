@@ -13,12 +13,14 @@ const template = document.createElement('template');
 template.innerHTML = `
 <style>
     :host {
-        display: block;
-        width: 100vw;
-        overflow: hidden;
+        --container-height: 100%;
         --indicator-size: 2vw;
         --indicator-color: rgba(255,255,255,0.3);
         --active-indicator: white;
+        display: block;
+        width: 100%;
+        height: var(--container-height);
+        overflow: hidden;
     }
     /* Desktops and laptops ----------- */
     @media only screen  and (min-width : 768px) {
@@ -40,6 +42,7 @@ template.innerHTML = `
         align-items: center;
         overflow-y: hidden;
         width: calc(var(--n) * 100%);
+        height: var(--container-height);
         transform: translate(calc(var(--i) / var(--n) * -100%));
         transition: transform .5s ease-out;
     }

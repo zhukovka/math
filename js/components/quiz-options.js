@@ -2,7 +2,7 @@ const style = document.createElement('template');
 style.innerHTML = `
 <style>
     :host {
-        --options-width: 70%;
+        --options-width: 100%;
         display: flex;
         /*flex: 1;*/
         width: var(--options-width);
@@ -25,15 +25,18 @@ style.innerHTML = `
       and (max-device-width: 812px)
       and (-webkit-min-device-pixel-ratio: 2)
       and (orientation: landscape) {
-          :host {
-            --options-width: 100%;
-          }
         .options{
             flex-direction: row;
         }
         .options > li {
             margin: 0 5px;
         }
+    }
+    
+    @media only screen and (min-width : 768px){
+          :host {
+            --options-width: 70%;
+          }
     }
     .options > li {
         margin-bottom: 10px;
@@ -71,6 +74,7 @@ style.innerHTML = `
         top: -5px;
         font-size: 3rem;
         z-index: 999;
+        line-height: 1;
     }
     
     label[correct=true]:after{

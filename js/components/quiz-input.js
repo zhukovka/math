@@ -14,6 +14,8 @@ style.innerHTML = `
         line-height: 1;
         -webkit-appearance: none;
         padding: 0;
+        box-shadow: none;
+        border-radius: 0;
     }
     input:focus {
         outline: none;

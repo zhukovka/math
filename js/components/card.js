@@ -13,20 +13,22 @@ style.innerHTML = `
         --card-face: #A4DBEA;
         --card-text: #293132;
         
-        --container-width: 100vw;
-        --container-height: 100vh;
-        --card-width: 80vw;
-        --card-height: 80vh;
+        --container-width: 100%;
+        --container-height: 100%;
+        --card-width: 80%;
+        --card-height: 80%;
         --shadow-x: calc(var(--card-width) * 0.075);
         --card-shadow:  var(--shadow-x) var(--shadow-x) 20px rgba(0, 0, 0, 0.1), calc( -1 * var(--shadow-x)) var(--shadow-x) 20px rgba(0, 0, 0, 0.1);
+        width: var(--container-width);
+        height: var(--container-height)
       }
     
     /* Desktops and laptops ----------- */
     @media only screen  and (min-width : 768px) and (min-height : 400px) {
         /* Styles */
         :host {
-           --card-width: 50vw;
-           --card-height: 50vh;
+           --card-width: 50%;
+           --card-height: 50%;
            --shadow-x: calc(var(--card-width) * 0.075);
            --card-shadow:  var(--shadow-x) var(--shadow-x) 20px rgba(0, 0, 0, 0.1), calc( -1 * var(--shadow-x)) var(--shadow-x) 20px rgba(0, 0, 0, 0.1);
         }
@@ -34,8 +36,8 @@ style.innerHTML = `
     @media only screen  and (min-width : 1200px) {
         /* Styles */
         :host {
-           --card-width: 40vw;
-           --card-height: 40vh;
+           --card-width: 40%;
+           --card-height: 40%;
            --shadow-x: calc(var(--card-width) * 0.075);
            --card-shadow:  var(--shadow-x) var(--shadow-x) 20px rgba(0, 0, 0, 0.1), calc( -1 * var(--shadow-x)) var(--shadow-x) 20px rgba(0, 0, 0, 0.1);
         }
