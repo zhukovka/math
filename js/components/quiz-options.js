@@ -2,19 +2,48 @@ const style = document.createElement('template');
 style.innerHTML = `
 <style>
     :host {
+        --options-width: 70%;
         display: flex;
-        flex: 1;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 70%;
+        /*flex: 1;*/
+        width: var(--options-width);
         align-self: center;
     }
-    p {
-        line-height: 1;
-        
+    
+    .options{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    /* Landscape */
+    @media only screen 
+      and (min-device-width: 320px) 
+      and (max-device-width: 812px)
+      and (-webkit-min-device-pixel-ratio: 2)
+      and (orientation: landscape) {
+          :host {
+            --options-width: 100%;
+          }
+        .options{
+            flex-direction: row;
+        }
+        .options > li {
+            margin: 0 5px;
+        }
+    }
+    .options > li {
+        margin-bottom: 10px;
+        flex: 1;
+        display: flex;
     }
     label {
         display: flex;
+        align-items: center;
+        flex: 1;
         background: #e8e2ca;
         color: #275345; 
         justify-content: center;
@@ -28,7 +57,7 @@ style.innerHTML = `
         width: 0;
         height: 0;
         margin: 0;
-        visibility: hidden;
+        position: absolute;
     }
     
     input[type=radio]:checked ~ label{
@@ -38,24 +67,25 @@ style.innerHTML = `
     
     label:after {
         position: absolute;
-        right: -45px;
+        right: 0;
         top: -5px;
         font-size: 3rem;
-        color: #e8e2ca;
+        z-index: 999;
     }
     
     label[correct=true]:after{
         content: '✔︎';
+        color: #00bb00;
     }
     label[correct=false]:after{
         content: '✘';
+        color: red;
     }
     
 </style>
-<div class="options">
+<ul class="options">
 
-</div>
-
+</ul>
 `;
 
 class QuizOptions extends HTMLElement {
@@ -68,7 +98,7 @@ class QuizOptions extends HTMLElement {
         const options = this.getAttribute("options") || "";
         this._options.innerHTML = options.split(",").map((option, i) => {
             const id = `${name}${option.replace(/\s/g, "")}`;
-            return `<p><input type="radio" name="${name}" id="${id}" value="${option}"><label for="${id}">${option}</label></p>`
+            return `<li><input type="radio" name="${name}" id="${id}" value="${option}"><label for="${id}">${option}</label></li>`
         }).join("");
     }
 

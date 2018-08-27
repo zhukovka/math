@@ -1,6 +1,7 @@
 import "./cards"
 import "./components/card-quiz"
 import "./components/quiz-options"
+import "./components/quiz-input"
 
 async function loadAnswers () {
     const answers = await fetch("./a.json").then(r => r.json());
@@ -36,8 +37,7 @@ async function loadAnswers () {
             card.addEventListener("click", e => {
                 if (e.target.classList.contains("check")) {
                     let {key, value} = card.answer;
-                    card.correct = !!value && !!answers[key] && answers[key].toLowerCase() === value.toLowerCase();
-                    console.log(answers[key], value)
+                    card.correct = !!value && !!answers[key] && checkAnswer(value, answers[key]);
                 }
             });
         }
@@ -53,6 +53,12 @@ async function loadAnswers () {
         });
     }
 
+}
+
+function checkAnswer (answer, solution) {
+    answer = answer.replace(/\s/g, "").toLowerCase();
+    solution = solution.replace(/\s/g, "").toLowerCase();
+    return answer === solution;
 }
 
 function shuffle (array) {

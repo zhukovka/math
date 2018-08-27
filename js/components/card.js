@@ -20,9 +20,9 @@ style.innerHTML = `
         --shadow-x: calc(var(--card-width) * 0.075);
         --card-shadow:  var(--shadow-x) var(--shadow-x) 20px rgba(0, 0, 0, 0.1), calc( -1 * var(--shadow-x)) var(--shadow-x) 20px rgba(0, 0, 0, 0.1);
       }
-      
+    
     /* Desktops and laptops ----------- */
-    @media only screen  and (min-width : 768px) {
+    @media only screen  and (min-width : 768px) and (min-height : 400px) {
         /* Styles */
         :host {
            --card-width: 50vw;

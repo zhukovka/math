@@ -19,7 +19,6 @@ class CardQuiz extends CardElement {
         const checkButton = document.createElement("button");
         checkButton.className = "check";
         checkButton.textContent = "Check";
-        //<button class="check">Check</button>
         this.appendChild(checkButton);
     }
 
@@ -28,13 +27,13 @@ class CardQuiz extends CardElement {
     }
 
     set correct (yes) {
-        const options = this.querySelector("quiz-options");
-        options.correct = yes
+        const options = this.querySelector("quiz-options, quiz-input");
+        if (options) options.correct = yes
     }
 
     get answer () {
-        const options = this.querySelector("quiz-options");
-        return {key: options.name, value: options.value}
+        const options = this.querySelector("quiz-options, quiz-input");
+        return options ? {key: options.name, value: options.value} : {};
     }
 }
 
