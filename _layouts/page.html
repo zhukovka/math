@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
-<head>{% include head.html %}</head>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+<head>{% include head.html %}
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"
+            async></script>
+</head>
 <body>
 <h1 class="center">{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</h1>
 <div class="flex flex-end">
@@ -27,6 +31,6 @@
     </aside>
 </div>
 {% include svg-symbols.html %}
-<script src="{{ "/assets/js/main.js" | relative_url }}"></script>
+<script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </body>
 </html>
